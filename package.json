@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "npx next telemetry disable",
-    "postinstall": "npx next telemetry disable",
+    "prebuild": "npm run check-types && npx next telemetry disable",
+    "postinstall": "npx next telemetry disable && npx ts-typie",
+    "check-types": "tsc --noEmit",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
@@ -13,5 +14,10 @@
     "next": "10.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "typescript": "^4.2.3"
   }
 }
