@@ -1,0 +1,47 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "simple-import-sort",
+    "eslint-plugin-import"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error",
+    "sort-imports": "off",
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "eol-last": "error",
+    "@typescript-eslint/no-namespace": "off",
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["./*", "src/components/*"]
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": "**/*.js",
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "simple-import-sort/imports": "off",
+        "import/order": [
+          "error",
+          {
+            "newlines-between": "always"
+          }
+        ]
+      }
+    }
+  ]
+}

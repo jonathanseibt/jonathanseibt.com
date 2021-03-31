@@ -1,0 +1,8 @@
+.next
+.vercel
+node_modules
+public
+.eslintignore
+.gitignore
+*.d.ts
+*.md
