@@ -23,7 +23,10 @@
     "no-restricted-imports": [
       "error",
       {
-        "patterns": ["./*", "src/components/*"]
+        "patterns": [
+          "./*",
+          "src/components/*"
+        ]
       }
     ]
   },

@@ -6,7 +6,8 @@
     "prebuild": "npm run lint && npx next telemetry disable",
     "postinstall": "npx next telemetry disable && npm run lint",
     "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
-    "lint": "npx ts-typie && npm run eslint && npm run check-types",
+    "lint": "npx ts-typie && npm run eslint && npm run prettier && npm run check-types",
+    "prettier": "npx prettier . --write",
     "check-types": "tsc --noEmit",
     "dev": "next dev",
     "build": "next build",
@@ -19,6 +20,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^7.2.8",
+    "@types/prettier": "^2.2.3",
     "@types/react": "^17.0.3",
     "@types/react-dom": "^17.0.3",
     "@typescript-eslint/eslint-plugin": "^4.20.0",
@@ -26,6 +28,7 @@
     "eslint": "^7.23.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
+    "prettier": "^2.2.1",
     "typescript": "^4.2.3"
   }
 }
