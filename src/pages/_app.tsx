@@ -2,7 +2,6 @@ import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import React, { FC, useEffect } from 'react';
-import { SnackbarProvider } from 'src/components';
 import useCustomTheme from 'src/theme';
 
 const MyApp: FC<AppProps> = ({ Component, pageProps: props }) => {
@@ -24,11 +23,9 @@ const MyApp: FC<AppProps> = ({ Component, pageProps: props }) => {
       </Head>
 
       <ThemeProvider theme={theme}>
-        <SnackbarProvider>
-          <CssBaseline />
+        <CssBaseline />
 
-          <Component {...props} />
-        </SnackbarProvider>
+        <Component {...props} />
       </ThemeProvider>
     </>
   );
