@@ -20,6 +20,7 @@
     "import/no-duplicates": "error",
     "eol-last": "error",
     "@typescript-eslint/no-namespace": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "error",
     "no-restricted-imports": [
       "error",
       {
