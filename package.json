@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "prebuild": "npm run lint && npx next telemetry disable",
     "build": "next build",
     "check-types": "tsc --noEmit",
+    "deploy": "npx vercel --prod",
     "dev": "next dev",
     "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
-    "postinstall": "npx next telemetry disable && npm run lint",
     "lint": "npx ts-typie && npx sort-package-json && npm run eslint && npm run prettier && npm run check-types",
     "prettier": "npx prettier . --write",
+    "preview": "npx vercel",
     "start": "next start"
   },
   "husky": {

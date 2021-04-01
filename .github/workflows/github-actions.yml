@@ -1,0 +1,28 @@
+name: Node CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Check build integrity
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x
+      - run: npm ci
+      - run: npm run eslint
+      - run: npm run prettier
+      - run: npm run check-types
+      - run: npm run build
+
+      - name: Deploy to Vercel (only when on main branch)
+        if: github.ref == 'refs/heads/main'
+        run: npx vercel --prod --confirm --token ${{ secrets.VERCEL_DEPLOY_TOKEN }}
