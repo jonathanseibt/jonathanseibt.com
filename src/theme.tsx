@@ -8,39 +8,14 @@ declare module '@material-ui/core/Box' {
 }
 
 export const palette = {
+  background: {
+    default: '#fafafa',
+  },
   text: {
-    primary: '#000',
-    secondary: '#000',
+    primary: '#303030',
   },
   primary: {
-    dark: '#000',
-    main: '#000',
-    light: '#000',
-  },
-  secondary: {
-    dark: '#000',
-    main: '#000',
-    light: '#000',
-  },
-  success: {
-    dark: '#33691e',
-    main: '#558b2f',
-    light: '#689f38',
-  },
-  info: {
-    dark: '#01579b',
-    main: '#0277bd',
-    light: '#0288d1',
-  },
-  warning: {
-    dark: '#e65100',
-    main: '#ef6c00',
-    light: '#f57c00',
-  },
-  error: {
-    dark: '#bf360c',
-    main: '#d84315',
-    light: '#e64a19',
+    main: '#303030',
   },
 };
 
@@ -89,7 +64,7 @@ const useCustomTheme = (): Theme => {
 
     shape: { borderRadius: multiply(8) },
 
-    typography: { fontFamily: ['Alegreya', 'Helvetica', 'Arial', 'sans-serif'].join(',') },
+    typography: { fontFamily: ['Alegreya', 'sans-serif'].join(',') },
   };
 
   const theme = responsiveFontSizes(createMuiTheme(config));
