@@ -4,13 +4,13 @@
   "private": true,
   "scripts": {
     "prebuild": "npm run lint && npx next telemetry disable",
-    "postinstall": "npx next telemetry disable && npm run lint",
-    "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
-    "lint": "npx ts-typie && npm run eslint && npm run prettier && npm run check-types",
-    "prettier": "npx prettier . --write",
+    "build": "next build",
     "check-types": "tsc --noEmit",
     "dev": "next dev",
-    "build": "next build",
+    "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
+    "postinstall": "npx next telemetry disable && npm run lint",
+    "lint": "npx ts-typie && npx sort-package-json && npm run eslint && npm run prettier && npm run check-types",
+    "prettier": "npx prettier . --write",
     "start": "next start"
   },
   "dependencies": {
