@@ -2,6 +2,7 @@
 .vercel
 node_modules
 public
+files
 .eslintignore
 .gitignore
 .prettierignore
