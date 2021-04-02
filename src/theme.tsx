@@ -204,6 +204,19 @@ const useCustomTheme = (): Theme => {
     },
   };
 
+  theme.overrides = {
+    ...theme.overrides,
+
+    MuiCssBaseline: {
+      '@global': {
+        '::selection': {
+          color: theme.palette.background.default,
+          background: theme.palette.primary.main,
+        },
+      },
+    },
+  };
+
   return theme;
 };
 
