@@ -37,8 +37,8 @@ export default class MyDocument extends Document {
         <Head>
           <meta name='theme-color' content={palette.primary.main} />
 
-          <link rel='preconnect' href='https://fonts.gstatic.com' />
-          <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Alegreya:wght@100;200;300;400;500;600;700;800;900&display=swap' />
+          <link rel='preconnect' crossOrigin='anonymous' href='https://fonts.gstatic.com' />
+          <link rel='stylesheet' crossOrigin='anonymous' href='https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;600;700&display=swap' />
         </Head>
 
         <body>
