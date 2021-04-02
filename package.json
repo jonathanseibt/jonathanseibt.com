@@ -31,14 +31,10 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.3",
-    "@material-ui/icons": "^4.11.2",
-    "@material-ui/lab": "^4.0.0-alpha.57",
     "classnames": "^2.2.6",
     "clean-css": "^5.1.2",
     "http-status-codes": "^2.1.4",
-    "mdi-material-ui": "^6.22.0",
     "next": "10.1.2",
-    "notistack": "^1.0.5",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },

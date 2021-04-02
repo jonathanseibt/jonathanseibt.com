@@ -27,8 +27,7 @@
         "patterns": [
           "./*",
           "src/components/*",
-          "@material-ui/*/*",
-          "mdi-material-ui/*"
+          "@material-ui/*/*"
         ]
       }
     ]
