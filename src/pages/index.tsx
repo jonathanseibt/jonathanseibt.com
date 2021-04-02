@@ -37,7 +37,7 @@ const Index: FC = () => {
 
         <Typography component='h1' variant='h3' color='primary'>
           <Box fontWeight='700' lineHeight='1.25'>
-            Hey! My name is Jonathan Seibt, and I'm a senior front end engineer.
+            Hey! My name is Jonathan Seibt, and I'm a Senior Front End Engineer.
           </Box>
         </Typography>
 
@@ -69,7 +69,7 @@ const Index: FC = () => {
       <Grid container spacing={8}>
         <Grid item>
           <Typography component='p' variant='body1' color='primary'>
-            <Box fontWeight='700'>
+            <Box fontWeight='600'>
               <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
             </Box>
           </Typography>
@@ -77,7 +77,7 @@ const Index: FC = () => {
 
         <Grid item>
           <Typography component='p' variant='body1' color='primary'>
-            <Box fontWeight='700'>
+            <Box fontWeight='600'>
               <ExternalLink href='https://github.com/jonathanseibt'>GitHub</ExternalLink>
             </Box>
           </Typography>
@@ -85,7 +85,7 @@ const Index: FC = () => {
 
         <Grid item>
           <Typography component='p' variant='body1' color='primary'>
-            <Box fontWeight='700'>
+            <Box fontWeight='600'>
               <ExternalLink href='https://github.com/jonathanseibt/jonathanseibt.com'>Source code</ExternalLink>
             </Box>
           </Typography>
