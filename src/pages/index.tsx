@@ -36,7 +36,7 @@ const Index: FC = () => {
         <Separator width={1} my={2} />
 
         <Typography component='h1' variant='h3' color='primary'>
-          <Box fontWeight='700' lineHeight='1.25'>
+          <Box component='span' fontWeight='700' lineHeight='1.25'>
             Hey! My name is Jonathan Seibt, and I'm a Senior Front End Engineer.
           </Box>
         </Typography>
@@ -44,7 +44,7 @@ const Index: FC = () => {
         <Separator width={1} my={2} />
 
         <Typography component='h2' variant='body1' color='primary'>
-          <Box fontWeight='400' lineHeight='1.75'>
+          <Box component='span' fontWeight='400' lineHeight='1.75'>
             From Caxias do Sul - RS - Brazil to the world. Since 1996 into life. Since 2007 into technology. Since 2014 into business.
           </Box>
         </Typography>
@@ -52,7 +52,7 @@ const Index: FC = () => {
         <Separator width={1} my={8} />
 
         <Typography component='h3' variant='h5' color='primary'>
-          <Box fontWeight='500' lineHeight='1.75'>
+          <Box component='span' fontWeight='500' lineHeight='1.75'>
             My bad, not much creativity was shown here. But I'd still like to get to know you better. Please, feel free to reach me out through
             <TypographySpace before>
               <Box component='span' fontWeight='700'>
