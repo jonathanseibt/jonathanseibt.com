@@ -2,12 +2,15 @@
   "name": "jonathanseibt.com",
   "private": true,
   "scripts": {
+    "prebuild": "npm run next-telemetry-disable",
     "build": "next build",
     "check-types": "tsc --noEmit",
     "deploy": "npx vercel --prod",
     "dev": "next dev",
     "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
+    "postinstall": "npm run next-telemetry-disable",
     "lint": "npx sort-package-json && npm run eslint && npm run prettier && npm run check-types",
+    "next-telemetry-disable": "next telemetry disable",
     "prettier": "npx prettier . --write --loglevel error",
     "preview": "npx vercel",
     "start": "next start"
