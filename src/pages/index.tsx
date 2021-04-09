@@ -1,7 +1,7 @@
-import { Box, ButtonBase, Grid, Typography, useTheme } from '@material-ui/core';
+import { ButtonBase, Grid, Typography, useTheme } from '@material-ui/core';
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { ExternalLink, Separator, TypographySpace } from 'src/components';
+import { Box, ExternalLink, Separator, TypographySpace } from 'src/components';
 
 const Index: FC = () => {
   const theme = useTheme();

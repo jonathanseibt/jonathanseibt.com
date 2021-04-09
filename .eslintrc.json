@@ -37,6 +37,15 @@
           "./*",
           "src/components/*",
           "@material-ui/*/*"
+        ],
+        "paths": [
+          {
+            "name": "@material-ui/core",
+            "message": "Use 'Box' from 'src/components' instead.",
+            "importNames": [
+              "Box"
+            ]
+          }
         ]
       }
     ]

@@ -1,5 +1,5 @@
-import { Box } from '@material-ui/core';
 import React, { FC } from 'react';
+import { Box } from 'src/components';
 
 interface Props {
   before?: boolean;

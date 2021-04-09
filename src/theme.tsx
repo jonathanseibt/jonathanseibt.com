@@ -1,12 +1,5 @@
 import { createMuiTheme, responsiveFontSizes, Theme, ThemeOptions, useMediaQuery } from '@material-ui/core';
 
-declare module '@material-ui/core/Box' {
-  interface BoxProps {
-    src?: string;
-    alt?: string;
-  }
-}
-
 export const palette = {
   background: {
     default: '#fafafa',
