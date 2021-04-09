@@ -8,7 +8,7 @@
     "dev": "next dev",
     "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
     "lint": "npx sort-package-json && npm run eslint && npm run prettier && npm run check-types",
-    "prettier": "npx prettier . --write",
+    "prettier": "npx prettier . --write --loglevel error",
     "preview": "npx vercel",
     "start": "next start"
   },
