@@ -17,12 +17,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
-      - run: npm ci
-      - run: npm run eslint
-      - run: npm run prettier
-      - run: npm run check-types
-      - run: npm run build
+      - run: yarn ci
+      - run: yarn eslint
+      - run: yarn prettier
+      - run: yarn check-types
+      - run: yarn build
 
       - name: Deploy to Vercel (only when on main branch)
         if: github.ref == 'refs/heads/main'
-        run: npx vercel --prod --confirm --token ${{ secrets.VERCEL_DEPLOY_TOKEN }}
+        run: vercel --prod --confirm --token ${{ secrets.VERCEL_DEPLOY_TOKEN }}

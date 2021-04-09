@@ -2,17 +2,19 @@
   "name": "jonathanseibt.com",
   "private": true,
   "scripts": {
-    "prebuild": "npm run next-telemetry-disable",
+    "prebuild": "yarn next-telemetry-disable",
     "build": "next build",
     "check-types": "tsc --noEmit",
-    "deploy": "npx vercel --prod",
+    "ci": "yarn install --frozen-lockfile",
+    "deploy": "vercel --prod",
     "dev": "next dev",
-    "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
-    "postinstall": "npm run next-telemetry-disable",
-    "lint": "npx sort-package-json && npm run eslint && npm run prettier && npm run check-types",
+    "eslint": "eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
+    "postinstall": "yarn next-telemetry-disable",
+    "lint": "sort-package-json && yarn eslint && yarn prettier && yarn check-types",
     "next-telemetry-disable": "next telemetry disable",
-    "prettier": "npx prettier . --write --loglevel error",
-    "preview": "npx vercel",
+    "prepare": "yarn global add next vercel eslint prettier sort-package-json",
+    "prettier": "prettier . --write --loglevel error",
+    "preview": "vercel",
     "start": "next start"
   },
   "husky": {
@@ -22,7 +24,7 @@
   },
   "lint-staged": {
     "*": [
-      "bash -c 'npm run lint'"
+      "bash -c yarn lint"
     ]
   },
   "dependencies": {
