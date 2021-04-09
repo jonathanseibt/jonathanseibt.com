@@ -8,7 +8,7 @@
     "deploy": "npx vercel --prod",
     "dev": "next dev",
     "eslint": "npx eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
-    "lint": "npx ts-typie && npx sort-package-json && npm run eslint && npm run prettier && npm run check-types",
+    "lint": "npx sort-package-json && npm run eslint && npm run prettier && npm run check-types",
     "prettier": "npx prettier . --write",
     "preview": "npx vercel",
     "start": "next start"
@@ -20,7 +20,6 @@
   },
   "lint-staged": {
     "package.json": [
-      "bash -c 'npx ts-typie'",
       "bash -c 'npx sort-package-json'"
     ],
     "*": [
