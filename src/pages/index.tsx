@@ -1,14 +1,13 @@
-import { Box, ButtonBase, Grid, Typography, useMediaQuery, useTheme } from '@material-ui/core';
+import { Box, ButtonBase, Grid, Typography, useTheme } from '@material-ui/core';
 import Link from 'next/link';
 import React, { FC } from 'react';
 import { ExternalLink, Separator, TypographySpace } from 'src/components';
 
 const Index: FC = () => {
   const theme = useTheme();
-  const phone = useMediaQuery(theme.breakpoints.down('xs'));
 
   return (
-    <Box p={phone ? 8 : 16} display='flex' flexDirection='column' justifyContent='space-between' minHeight='100vh'>
+    <Box p={{ xs: 8, sm: 16 }} display='flex' flexDirection='column' justifyContent='space-between' minHeight='100vh'>
       <Box width={theme.spacing(64)} maxWidth='50vw'>
         <Link href='/' passHref>
           <ButtonBase focusRipple>
