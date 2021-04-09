@@ -21,13 +21,8 @@
     }
   },
   "lint-staged": {
-    "package.json": [
-      "bash -c 'npx sort-package-json'"
-    ],
     "*": [
-      "bash -c 'npm run eslint'",
-      "bash -c 'npm run prettier'",
-      "bash -c 'npm run check-types'"
+      "bash -c 'npm run lint'"
     ]
   },
   "dependencies": {
