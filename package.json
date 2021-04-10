@@ -12,9 +12,9 @@
     "postinstall": "yarn next-telemetry-disable",
     "lint": "sort-package-json && yarn eslint && yarn prettier && yarn check-types",
     "next-telemetry-disable": "next telemetry disable",
-    "prepare": "yarn global add next vercel eslint prettier sort-package-json && husky install",
     "prettier": "prettier . --write --loglevel error",
     "preview": "vercel",
+    "setup": "yarn global add next vercel eslint prettier sort-package-json && husky install",
     "start": "next start"
   },
   "lint-staged": {
