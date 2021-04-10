@@ -68,7 +68,7 @@ const Index: FC = () => {
       <Grid container spacing={8}>
         <Grid item>
           <Typography component='p' variant='body1' color='primary'>
-            <Box fontWeight='600'>
+            <Box component='span' fontWeight='600'>
               <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
             </Box>
           </Typography>
@@ -76,7 +76,7 @@ const Index: FC = () => {
 
         <Grid item>
           <Typography component='p' variant='body1' color='primary'>
-            <Box fontWeight='600'>
+            <Box component='span' fontWeight='600'>
               <ExternalLink href='https://github.com/jonathanseibt'>GitHub</ExternalLink>
             </Box>
           </Typography>
@@ -84,7 +84,7 @@ const Index: FC = () => {
 
         <Grid item>
           <Typography component='p' variant='body1' color='primary'>
-            <Box fontWeight='600'>
+            <Box component='span' fontWeight='600'>
               <ExternalLink href='https://github.com/jonathanseibt/jonathanseibt.com'>Source code</ExternalLink>
             </Box>
           </Typography>
