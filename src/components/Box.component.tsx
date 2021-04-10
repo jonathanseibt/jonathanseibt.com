@@ -11,9 +11,11 @@ declare module '@material-ui/core/Box' {
   }
 }
 
-interface Props extends Omit<BoxProps, 'className' | 'style' | 'fontStyle' | 'bgcolor'> {
+interface CustomStyleProps {
   backgroundColor?: CSS.Property.BackgroundColor;
 }
+
+type Props = CustomStyleProps & Omit<BoxProps, 'className' | 'style' | 'fontStyle' | 'bgcolor'>;
 
 const Box: FC<Props> = ({ backgroundColor, component, ...rest }) => {
   const styles = useStyles({ backgroundColor });
@@ -23,7 +25,7 @@ const Box: FC<Props> = ({ backgroundColor, component, ...rest }) => {
 
 export default Box;
 
-type StyleProps = Pick<Props, 'backgroundColor'>;
+type StyleProps = CustomStyleProps;
 
 const useStyles = makeStyles<Theme, StyleProps>({
   'Box-root': (style) => ({

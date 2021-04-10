@@ -1,7 +1,7 @@
-import { ButtonBase, Grid, Typography, useTheme } from '@material-ui/core';
+import { ButtonBase, Grid, useTheme } from '@material-ui/core';
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { Box, ExternalLink, Separator, TypographySpace } from 'src/components';
+import { Box, ExternalLink, Separator, Typography } from 'src/components';
 
 const Index: FC = () => {
   const theme = useTheme();
@@ -34,32 +34,24 @@ const Index: FC = () => {
 
         <Separator width={1} my={2} />
 
-        <Typography component='h1' variant='h3' color='primary'>
-          <Box component='span' fontWeight='700' lineHeight='1.25'>
-            Hey! My name is Jonathan Seibt, and I'm a Senior Front End Engineer.
-          </Box>
+        <Typography component='h1' variant='h3' color='primary' fontWeight={700} lineHeight='1.25'>
+          Hey! My name is Jonathan Seibt, and I'm a Senior Front End Engineer.
         </Typography>
 
         <Separator width={1} my={2} />
 
-        <Typography component='h2' variant='body1' color='primary'>
-          <Box component='span' fontWeight='400' lineHeight='1.75'>
-            From Caxias do Sul - RS - Brazil to the world. Since 1996 into life. Since 2007 into technology. Since 2014 into business.
-          </Box>
+        <Typography component='h2' variant='body1' color='primary' fontWeight={400} lineHeight='1.75'>
+          From Caxias do Sul - RS - Brazil to the world. Since 1996 into life. Since 2007 into technology. Since 2014 into business.
         </Typography>
 
         <Separator width={1} my={8} />
 
-        <Typography component='h3' variant='h5' color='primary'>
-          <Box component='span' fontWeight='500' lineHeight='1.75'>
-            My bad, not much creativity was shown here. But I'd still like to get to know you better. Please, feel free to reach me out through
-            <TypographySpace before>
-              <Box component='span' fontWeight='700'>
-                <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
-              </Box>
-            </TypographySpace>
-            , I'd be happy to connect with you! There you can find out more about me and we can have a good virtual coffee together. What do you think?
-          </Box>
+        <Typography component='h3' variant='h5' color='primary' fontWeight={500} lineHeight='1.75'>
+          My bad, not much creativity was shown here. But I'd still like to get to know you better. Please, feel free to reach me out through
+          <Typography spaceBefore spaceAfter component='span' fontWeight={700} fontSize='inherit'>
+            <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
+          </Typography>
+          , I'd be happy to connect with you! There you can find out more about me and we can have a good virtual coffee together. What do you think?
         </Typography>
 
         <Separator width={1} my={16} />
@@ -67,26 +59,20 @@ const Index: FC = () => {
 
       <Grid container spacing={8}>
         <Grid item>
-          <Typography component='p' variant='body1' color='primary'>
-            <Box component='span' fontWeight='600'>
-              <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
-            </Box>
+          <Typography component='p' variant='body1' color='primary' fontWeight={600}>
+            <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
           </Typography>
         </Grid>
 
         <Grid item>
-          <Typography component='p' variant='body1' color='primary'>
-            <Box component='span' fontWeight='600'>
-              <ExternalLink href='https://github.com/jonathanseibt'>GitHub</ExternalLink>
-            </Box>
+          <Typography component='p' variant='body1' color='primary' fontWeight={600}>
+            <ExternalLink href='https://github.com/jonathanseibt'>GitHub</ExternalLink>
           </Typography>
         </Grid>
 
         <Grid item>
-          <Typography component='p' variant='body1' color='primary'>
-            <Box component='span' fontWeight='600'>
-              <ExternalLink href='https://github.com/jonathanseibt/jonathanseibt.com'>Source code</ExternalLink>
-            </Box>
+          <Typography component='p' variant='body1' color='primary' fontWeight={600}>
+            <ExternalLink href='https://github.com/jonathanseibt/jonathanseibt.com'>Source code</ExternalLink>
           </Typography>
         </Grid>
       </Grid>
