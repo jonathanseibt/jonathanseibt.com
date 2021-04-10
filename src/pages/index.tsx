@@ -48,7 +48,7 @@ const Index: FC = () => {
 
         <Typography component='h3' variant='h5' color='primary' fontWeight={500} lineHeight='1.75'>
           My bad, not much creativity was shown here. But I'd still like to get to know you better. Please, feel free to reach me out through
-          <Typography spaceBefore spaceAfter component='span' fontWeight={700} fontSize='inherit'>
+          <Typography spaceBefore component='span' fontWeight={700} fontSize='inherit'>
             <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
           </Typography>
           , I'd be happy to connect with you! There you can find out more about me and we can have a good virtual coffee together. What do you think?
