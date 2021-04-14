@@ -1,5 +1,7 @@
-// eslint-disable-next-line no-restricted-imports
-import { Box, BoxProps } from '@material-ui/core';
+import {
+  Box, // eslint-disable-line no-restricted-syntax
+  BoxProps,
+} from '@material-ui/core';
 import classnames from 'classnames';
 import React, { FC } from 'react';
 

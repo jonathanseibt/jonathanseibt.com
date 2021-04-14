@@ -37,23 +37,18 @@
           "./*",
           "src/components/*",
           "@material-ui/*/*"
-        ],
-        "paths": [
-          {
-            "name": "@material-ui/core",
-            "message": "Use 'Box' from 'src/components' instead.",
-            "importNames": [
-              "Box"
-            ]
-          },
-          {
-            "name": "@material-ui/core",
-            "message": "Use 'Typography' from 'src/components' instead.",
-            "importNames": [
-              "Typography"
-            ]
-          }
         ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ImportDeclaration[source.value='@material-ui/core'] > ImportSpecifier[imported.name='Box']",
+        "message": "Use 'Box' from 'src/components' instead."
+      },
+      {
+        "selector": "ImportDeclaration[source.value='@material-ui/core'] > ImportSpecifier[imported.name='Typography']",
+        "message": "Use 'Typography' from 'src/components' instead."
       }
     ]
   },

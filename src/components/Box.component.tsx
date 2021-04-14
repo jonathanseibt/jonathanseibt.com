@@ -1,5 +1,9 @@
-// eslint-disable-next-line no-restricted-imports
-import { Box as MuiBox, BoxProps, makeStyles, Theme } from '@material-ui/core';
+import {
+  Box as MuiBox, // eslint-disable-line no-restricted-syntax
+  BoxProps,
+  makeStyles,
+  Theme,
+} from '@material-ui/core';
 import classnames from 'classnames';
 import * as CSS from 'csstype';
 import React, { FC } from 'react';
