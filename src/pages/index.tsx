@@ -8,29 +8,35 @@ const Index: FC = () => {
 
   return (
     <Box p={{ xs: 8, sm: 16 }} display='flex' flexDirection='column' justifyContent='space-between' minHeight='100vh'>
-      <Box width={theme.spacing(64)} maxWidth='50vw'>
+      <Box component='header' width={theme.spacing(64)} maxWidth='50vw'>
         <Link href='/' passHref>
           <ButtonBase focusRipple>
-            <Box
-              component='img'
-              src='jonathan-seibt-logo.png'
-              alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
-              width='100%'
-            />
+            <Box component='figure'>
+              <Box
+                component='img'
+                src='jonathan-seibt-logo.png'
+                alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
+                width='100%'
+                display='block'
+              />
+            </Box>
           </ButtonBase>
         </Link>
       </Box>
 
-      <Grid container spacing={0} item md={6}>
+      <Grid component='main' container spacing={0} item md={6}>
         <Separator width={1} my={16} />
 
-        <Box
-          component='img'
-          src='two-fingers-up-emoji.png'
-          alt='Yellow hand emoji, in a 3D way, with two fingers up, like a cool greeting gesture.'
-          width={theme.spacing(16)}
-          height={theme.spacing(16)}
-        />
+        <Box component='figure'>
+          <Box
+            component='img'
+            src='two-fingers-up-emoji.png'
+            alt='Yellow hand emoji, in a 3D way, with two fingers up, like a cool greeting gesture.'
+            width={theme.spacing(16)}
+            height={theme.spacing(16)}
+            display='block'
+          />
+        </Box>
 
         <Separator width={1} my={2} />
 
@@ -57,25 +63,29 @@ const Index: FC = () => {
         <Separator width={1} my={16} />
       </Grid>
 
-      <Grid container spacing={8}>
-        <Grid item>
-          <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' variant='body1' color='primary' fontWeight={600}>
-            LinkedIn
-          </Typography>
-        </Grid>
+      <Box component='footer'>
+        <Box component='nav'>
+          <Grid component='ul' container spacing={8}>
+            <Grid component='li' item>
+              <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' variant='body1' color='primary' fontWeight={600}>
+                LinkedIn
+              </Typography>
+            </Grid>
 
-        <Grid item>
-          <Typography component={ExternalLink} href='https://github.com/jonathanseibt' variant='body1' color='primary' fontWeight={600}>
-            GitHub
-          </Typography>
-        </Grid>
+            <Grid component='li' item>
+              <Typography component={ExternalLink} href='https://github.com/jonathanseibt' variant='body1' color='primary' fontWeight={600}>
+                GitHub
+              </Typography>
+            </Grid>
 
-        <Grid item>
-          <Typography component={ExternalLink} href='https://github.com/jonathanseibt/jonathanseibt.com' variant='body1' color='primary' fontWeight={600}>
-            Source code
-          </Typography>
-        </Grid>
-      </Grid>
+            <Grid component='li' item>
+              <Typography component={ExternalLink} href='https://github.com/jonathanseibt/jonathanseibt.com' variant='body1' color='primary' fontWeight={600}>
+                Source code
+              </Typography>
+            </Grid>
+          </Grid>
+        </Box>
+      </Box>
     </Box>
   );
 };

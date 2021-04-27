@@ -217,6 +217,22 @@ const useCustomTheme = (): Theme => {
           borderStyle: 'none',
           borderWidth: 'unset',
         },
+        figure: {
+          display: 'block',
+          marginBlockStart: 'unset',
+          marginBlockEnd: 'unset',
+          marginInlineStart: 'unset',
+          marginInlineEnd: 'unset',
+        },
+        ul: {
+          display: 'block',
+          listStyleType: 'none',
+          marginBlockStart: 'unset',
+          marginBlockEnd: 'unset',
+          marginInlineStart: 'unset',
+          marginInlineEnd: 'unset',
+          paddingInlineStart: 'unset',
+        },
       },
     },
   };
