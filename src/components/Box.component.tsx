@@ -22,9 +22,11 @@ interface CustomStyleProps {
 type Props = CustomStyleProps & Omit<BoxProps, 'className' | 'style' | 'fontStyle' | 'bgcolor'>;
 
 const Box: FC<Props> = ({ backgroundColor, component, ...rest }) => {
-  const styles = useStyles({ backgroundColor });
+  const customStyles = { backgroundColor };
+  const styles = useStyles(customStyles);
+  const hasCustomStyles = !!Object.values(customStyles)?.filter((style) => style)?.length;
 
-  return <MuiBox {...rest} {...(component ? { component: component } : undefined)} className={classnames(styles['Box-root'])} />;
+  return <MuiBox {...rest} {...(component ? { component: component } : undefined)} className={classnames([{ [styles['Box-root']]: hasCustomStyles }])} />;
 };
 
 export default Box;

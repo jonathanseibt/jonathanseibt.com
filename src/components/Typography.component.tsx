@@ -22,13 +22,15 @@ interface Props extends CustomStyleProps, Omit<TypographyProps, 'classes' | 'cla
 }
 
 const Typography: FC<Props> = ({ fontWeight, lineHeight, fontSize, spaceBefore, spaceAfter, component, ...rest }) => {
-  const styles = useStyles({ fontWeight, lineHeight, fontSize });
+  const customStyles = { fontWeight, lineHeight, fontSize };
+  const styles = useStyles(customStyles);
+  const hasCustomStyles = !!Object.values(customStyles)?.filter((style) => style)?.length;
 
   return (
     <>
       {spaceBefore && ' '}
 
-      <MuiTypography {...rest} {...(component ? { component: component } : undefined)} className={classnames(styles['Typography-root'])} />
+      <MuiTypography {...rest} {...(component ? { component: component } : undefined)} className={classnames({ [styles['Typography-root']]: hasCustomStyles })} />
 
       {spaceAfter && ' '}
     </>
