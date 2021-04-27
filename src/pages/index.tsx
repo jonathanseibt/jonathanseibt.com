@@ -41,7 +41,7 @@ const Index: FC = () => {
         <Separator width={1} my={2} />
 
         <Typography component='h1' variant='h3' color='primary' fontWeight={700} lineHeight='1.25'>
-          Hey! My name is Jonathan Seibt, and I'm a Senior Front End Engineer.
+          Hey! My name's Jonathan Seibt, and I'm a Senior Front End Engineer.
         </Typography>
 
         <Separator width={1} my={2} />
@@ -53,11 +53,11 @@ const Index: FC = () => {
         <Separator width={1} my={8} />
 
         <Typography component='h3' variant='h5' color='primary' fontWeight={500} lineHeight='1.75'>
-          My bad, not much creativity was shown here. But I'd still like to get to know you better. Please, feel free to reach me out through
+          Hey, how's it going? I'm really happy to have you here! I'm sure I'd like to get to know you better too. Please, feel free to get in touch and connect with me through{' '}
           <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' spaceBefore fontWeight={700} fontSize='inherit'>
             LinkedIn
           </Typography>
-          , I'd be happy to connect with you! There you can find out more about me and we can have a good virtual coffee together. What do you think?
+          . There you can find out more about me too, and we can have a good virtual coffee together. What do you think?
         </Typography>
 
         <Separator width={1} my={16} />
