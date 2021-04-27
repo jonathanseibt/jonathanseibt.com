@@ -2,13 +2,12 @@ import {
   Box, // eslint-disable-line no-restricted-syntax
   BoxProps,
 } from '@material-ui/core';
-import classnames from 'classnames';
 import React, { FC } from 'react';
 
-type Props = BoxProps;
+type Props = Omit<BoxProps, 'component'>;
 
-const Separator: FC<Props> = ({ component, className, ...rest }) => {
-  return <Box {...rest} {...(component ? { component: component } : undefined)} className={classnames('Separator-root', className)} />;
+const Separator: FC<Props> = ({ ...rest }) => {
+  return <Box {...rest} component='hr' />;
 };
 
 export default Separator;

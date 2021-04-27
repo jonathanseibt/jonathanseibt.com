@@ -206,6 +206,17 @@ const useCustomTheme = (): Theme => {
           color: theme.palette.background.default,
           background: theme.palette.primary.main,
         },
+        hr: {
+          display: 'block',
+          unicodeBidi: 'unset',
+          marginBlockStart: 'unset',
+          marginBlockEnd: 'unset',
+          marginInlineStart: 'unset',
+          marginInlineEnd: 'unset',
+          overflow: 'unset',
+          borderStyle: 'none',
+          borderWidth: 'unset',
+        },
       },
     },
   };
