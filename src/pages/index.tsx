@@ -48,8 +48,8 @@ const Index: FC = () => {
 
         <Typography component='h3' variant='h5' color='primary' fontWeight={500} lineHeight='1.75'>
           My bad, not much creativity was shown here. But I'd still like to get to know you better. Please, feel free to reach me out through
-          <Typography spaceBefore component='span' fontWeight={700} fontSize='inherit'>
-            <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
+          <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' spaceBefore fontWeight={700} fontSize='inherit'>
+            LinkedIn
           </Typography>
           , I'd be happy to connect with you! There you can find out more about me and we can have a good virtual coffee together. What do you think?
         </Typography>
@@ -59,20 +59,20 @@ const Index: FC = () => {
 
       <Grid container spacing={8}>
         <Grid item>
-          <Typography component='p' variant='body1' color='primary' fontWeight={600}>
-            <ExternalLink href='https://www.linkedin.com/in/jonathanseibt'>LinkedIn</ExternalLink>
+          <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' variant='body1' color='primary' fontWeight={600}>
+            LinkedIn
           </Typography>
         </Grid>
 
         <Grid item>
-          <Typography component='p' variant='body1' color='primary' fontWeight={600}>
-            <ExternalLink href='https://github.com/jonathanseibt'>GitHub</ExternalLink>
+          <Typography component={ExternalLink} href='https://github.com/jonathanseibt' variant='body1' color='primary' fontWeight={600}>
+            GitHub
           </Typography>
         </Grid>
 
         <Grid item>
-          <Typography component='p' variant='body1' color='primary' fontWeight={600}>
-            <ExternalLink href='https://github.com/jonathanseibt/jonathanseibt.com'>Source code</ExternalLink>
+          <Typography component={ExternalLink} href='https://github.com/jonathanseibt/jonathanseibt.com' variant='body1' color='primary' fontWeight={600}>
+            Source code
           </Typography>
         </Grid>
       </Grid>

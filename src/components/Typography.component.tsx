@@ -1,5 +1,6 @@
 import {
   BoxProps,
+  LinkProps,
   makeStyles,
   Theme,
   Typography as MuiTypography, // eslint-disable-line no-restricted-syntax
@@ -15,7 +16,7 @@ interface CustomStyleProps {
   fontSize?: CSS.Property.FontSize;
 }
 
-interface Props extends CustomStyleProps, Omit<TypographyProps, 'classes' | 'className' | 'style'>, Pick<BoxProps, 'component'> {
+interface Props extends CustomStyleProps, Omit<TypographyProps, 'classes' | 'className' | 'style'>, Pick<BoxProps, 'component'>, Pick<LinkProps, 'href'> {
   spaceBefore?: boolean;
   spaceAfter?: boolean;
 }
