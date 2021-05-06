@@ -6,8 +6,8 @@ import React, { FC } from 'react';
 
 type Props = Omit<BoxProps, 'component'>;
 
-const Separator: FC<Props> = ({ ...rest }) => {
-  return <Box {...rest} component='hr' />;
+const Separator: FC<Props> = ({ width = 1, ...rest }) => {
+  return <Box {...rest} component='hr' width={width} />;
 };
 
 export default Separator;

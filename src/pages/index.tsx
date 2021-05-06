@@ -22,23 +22,23 @@ const Index: FC = () => {
       </Box>
 
       <Grid component='main' container spacing={0} item md={6}>
-        <Separator width={1} my={16} />
+        <Separator my={16} />
 
         <Image src='two-fingers-up-emoji.png' alt='Yellow hand emoji, in a 3D way, with two fingers up, like a cool greeting gesture.' width={theme.spacing(16)} height={theme.spacing(16)} />
 
-        <Separator width={1} my={2} />
+        <Separator my={2} />
 
         <Typography component='h1' variant='h3' color='primary' fontWeight={700} lineHeight='1.25'>
           Hey! My name's Jonathan Seibt, and I'm a Senior Front End Engineer.
         </Typography>
 
-        <Separator width={1} my={2} />
+        <Separator my={2} />
 
         <Typography component='h2' variant='body1' color='primary' fontWeight={400} lineHeight='1.75'>
           From Caxias do Sul - RS - Brazil to the world. Since 1996 into life. Since 2007 into technology. Since 2014 into business.
         </Typography>
 
-        <Separator width={1} my={8} />
+        <Separator my={8} />
 
         <Typography component='h3' variant='h5' color='primary' fontWeight={500} lineHeight='1.75'>
           Hey, how's it going? I'm really happy to have you here! I'm sure I'd like to get to know you better too. Please, feel free to get in touch and connect with me through{' '}
@@ -48,7 +48,7 @@ const Index: FC = () => {
           . There you can find out more about me too, and we can have a good virtual coffee together. What do you think?
         </Typography>
 
-        <Separator width={1} my={16} />
+        <Separator my={16} />
       </Grid>
 
       <Box component='footer'>
