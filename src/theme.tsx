@@ -218,7 +218,7 @@ const useCustomTheme = (): Theme => {
           borderWidth: 'unset',
         },
         figure: {
-          display: 'block',
+          display: 'contents',
           marginBlockStart: 'unset',
           marginBlockEnd: 'unset',
           marginInlineStart: 'unset',

@@ -1,25 +1,22 @@
 import { ButtonBase, Grid, useTheme } from '@material-ui/core';
 import Link from 'next/link';
 import React, { FC } from 'react';
-import { Box, ExternalLink, Separator, Typography } from 'src/components';
+import { Box, ExternalLink, Image, Separator, Typography } from 'src/components';
 
 const Index: FC = () => {
   const theme = useTheme();
 
   return (
     <Box p={{ xs: 8, sm: 16 }} display='flex' flexDirection='column' justifyContent='space-between' minHeight='100vh'>
-      <Box component='header' width={theme.spacing(64)} maxWidth='50vw'>
+      <Box component='header'>
         <Link href='/' passHref>
           <ButtonBase focusRipple>
-            <Box component='figure'>
-              <Box
-                component='img'
-                src='jonathan-seibt-logo.png'
-                alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
-                width='100%'
-                display='block'
-              />
-            </Box>
+            <Image
+              src='jonathan-seibt-logo.png'
+              alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
+              width={theme.spacing(64)}
+              maxWidth='50vw'
+            />
           </ButtonBase>
         </Link>
       </Box>
@@ -27,16 +24,7 @@ const Index: FC = () => {
       <Grid component='main' container spacing={0} item md={6}>
         <Separator width={1} my={16} />
 
-        <Box component='figure'>
-          <Box
-            component='img'
-            src='two-fingers-up-emoji.png'
-            alt='Yellow hand emoji, in a 3D way, with two fingers up, like a cool greeting gesture.'
-            width={theme.spacing(16)}
-            height={theme.spacing(16)}
-            display='block'
-          />
-        </Box>
+        <Image src='two-fingers-up-emoji.png' alt='Yellow hand emoji, in a 3D way, with two fingers up, like a cool greeting gesture.' width={theme.spacing(16)} height={theme.spacing(16)} />
 
         <Separator width={1} my={2} />
 
