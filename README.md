@@ -60,3 +60,7 @@
 `yarn dev`
 
 Done! 👏
+
+<hr />
+
+This website's not intended to be SEO optimized nor lighting fast. This is my personal SSR Next.js + Material-UI playground. Most parts of my tests aren't published. Maybe someday it might grow and gain more sections, but for today, this is it. And just in case you feel that that's too much for a dozen words single-page website, you're right. It's intended for waaay more than that...
