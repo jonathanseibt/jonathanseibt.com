@@ -1,21 +1,21 @@
 {
   "name": "jonathanseibt.com",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "libs/*"
+    ]
+  },
   "scripts": {
-    "prebuild": "yarn next-telemetry-disable",
-    "build": "next build",
-    "check-types": "tsc --noEmit",
-    "ci": "yarn install --frozen-lockfile",
-    "deploy": "vercel --prod",
-    "dev": "next dev",
-    "eslint": "eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
-    "postinstall": "yarn next-telemetry-disable",
-    "lint": "sort-package-json && yarn eslint && yarn prettier && yarn check-types",
-    "next-telemetry-disable": "next telemetry disable",
-    "prettier": "prettier . --write --loglevel error",
-    "preview": "vercel",
-    "setup": "yarn global add next vercel eslint prettier sort-package-json && husky install",
-    "start": "next start"
+    "clean": "git clean -dfX",
+    "postinstall": "husky install",
+    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:check-types",
+    "lint:eslint": "yarn eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
+    "lint:prettier": "yarn prettier . --write --loglevel error",
+    "lint:check-types": "yarn workspaces run lint:check-types",
+    "dev:web": "yarn workspace @jonathanseibt.com/web run dev",
+    "build:web": "yarn workspace @jonathanseibt.com/web run build"
   },
   "lint-staged": {
     "*": [
@@ -23,27 +23,24 @@
     ]
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
-    "classnames": "^2.3.1",
-    "clean-css": "^5.1.2",
-    "http-status-codes": "^2.1.4",
-    "next": "10.2.3",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "color": "^4.2.3",
+    "http-status-codes": "^2.2.0"
   },
   "devDependencies": {
-    "@types/classnames": "^2.3.1",
-    "@types/clean-css": "^4.2.4",
-    "@types/react": "^17.0.8",
-    "@types/react-dom": "^17.0.5",
-    "@typescript-eslint/eslint-plugin": "^4.25.0",
-    "@typescript-eslint/parser": "^4.25.0",
-    "eslint": "^7.27.0",
-    "eslint-plugin-import": "^2.23.3",
+    "@types/color": "^3.0.3",
+    "@types/node": "^17.0.26",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
+    "eslint": "^8.14.0",
+    "eslint-plugin-folders": "^1.0.3",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.4.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "prettier": "^2.3.0",
-    "typescript": "^4.3.2"
+    "eslint-plugin-unicorn": "^42.0.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.4.0",
+    "prettier": "^2.6.2",
+    "typescript": "^4.6.3"
   }
 }

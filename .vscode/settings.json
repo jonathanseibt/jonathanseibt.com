@@ -1,7 +1,56 @@
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "js/ts.implicitProjectConfig.experimentalDecorators": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "git.enableSmartCommit": false,
+  "git.showPushSuccessNotification": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.maxMemoryForLargeFilesMB": 8192,
+  "files.associations": {
+    ".env.example": "env",
+    ".vercelignore": "ignore"
+  },
+  "editor.formatOnSave": true,
   "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.renderControlCharacters": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "colorize.include": [
+    "**/*.json",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.css"
+  ],
+  "search.exclude": {
+    "**/.next": true
   }
 }

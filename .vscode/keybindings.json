@@ -1,0 +1,56 @@
+// HEY, YOU! READ THIS:
+// This file is not a configuration file. The only purpose of this file is to serve as backup. You still need to manually setup these keybindings in your VSCode.
+
+[
+  // To uppercase
+  {
+    "key": "ctrl+shift+u",
+    "command": "editor.action.transformToUppercase"
+  },
+
+  // To lowercase
+  {
+    "key": "ctrl+shift+l",
+    "command": "-selectAllSearchEditorMatches"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-editor.action.selectHighlights"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "-addCursorsAtSearchResults"
+  },
+  {
+    "key": "ctrl+shift+l",
+    "command": "editor.action.transformToLowercase"
+  },
+
+  // Delete current line
+  {
+    "key": "ctrl+shift+k",
+    "command": "-editor.action.deleteLines"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "editor.action.deleteLines"
+  },
+
+  // Format document
+  {
+    "key": "ctrl+shift+i",
+    "command": "-editor.action.formatDocument"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "-filesExplorer.findInFolder"
+  },
+  {
+    "key": "shift+alt+f",
+    "command": "editor.action.formatDocument"
+  }
+]

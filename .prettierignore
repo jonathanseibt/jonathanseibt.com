@@ -1,10 +1,1 @@
-.next
-.vercel
 node_modules
-public
-files
-.eslintignore
-.gitignore
-.prettierignore
-*.d.ts
-*.md
