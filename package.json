@@ -10,10 +10,9 @@
   "scripts": {
     "clean": "git clean -dfX",
     "postinstall": "husky install",
-    "lint": "yarn lint:eslint && yarn lint:prettier && yarn lint:check-types",
+    "lint": "yarn lint:eslint && yarn lint:prettier && yarn workspaces run lint",
     "lint:eslint": "yarn eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
     "lint:prettier": "yarn prettier . --write --loglevel error",
-    "lint:check-types": "yarn workspaces run lint:check-types",
     "dev:web": "yarn workspace @jonathanseibt.com/web run dev",
     "build:web": "yarn workspace @jonathanseibt.com/web run build"
   },
@@ -23,24 +22,33 @@
     ]
   },
   "dependencies": {
+    "@emotion/react": "^11.10.0",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@mui/material": "^5.10.0",
     "color": "^4.2.3",
-    "http-status-codes": "^2.2.0"
+    "http-status-codes": "^2.2.0",
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.18.10",
     "@types/color": "^3.0.3",
-    "@types/node": "^17.0.26",
-    "@typescript-eslint/eslint-plugin": "^5.20.0",
-    "@typescript-eslint/parser": "^5.20.0",
-    "eslint": "^8.14.0",
+    "@types/node": "^18.7.2",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
     "eslint-plugin-folders": "^1.0.3",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-react": "^7.30.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unicorn": "^42.0.0",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.4.0",
-    "prettier": "^2.6.2",
-    "typescript": "^4.6.3"
+    "eslint-plugin-unicorn": "^43.0.2",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "open-cli": "^7.0.1",
+    "prettier": "^2.7.1",
+    "typescript": "^4.3.5"
   }
 }

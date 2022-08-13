@@ -2,7 +2,6 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "kamikillerto.vscode-colorize",
-    "mikestead.dotenv"
+    "kamikillerto.vscode-colorize"
   ]
 }

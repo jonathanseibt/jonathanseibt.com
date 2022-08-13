@@ -1,5 +1,5 @@
-import { Box, ButtonBase, Grid, Typography } from "@mui/material";
-import { SystemStyleObject } from "@mui/system";
+import { Box, ButtonBase, Grid, Theme, Typography } from "@mui/material";
+import { SystemStyleObject as SX } from "@mui/system";
 import { NextPage } from "next";
 import Link from "next/link";
 import { ExternalLink, Image, Separator } from "src/components";
@@ -12,7 +12,7 @@ const IndexPage: NextPage = (): JSX.Element => (
           <Image
             src='jonathan-seibt-logo.png'
             alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
-            sx={(theme): SystemStyleObject => ({ width: theme.spacing(64), maxWidth: "50vw" })}
+            sx={(theme): SX<Theme> => ({ width: theme.spacing(64), maxWidth: "50vw" })}
           />
         </ButtonBase>
       </Link>
@@ -25,7 +25,7 @@ const IndexPage: NextPage = (): JSX.Element => (
         <Image
           src='two-fingers-up-emoji.png'
           alt='Yellow hand emoji, in a 3D way, with two fingers up, like a cool greeting gesture.'
-          sx={(theme): SystemStyleObject => ({ width: theme.spacing(16), height: theme.spacing(16) })}
+          sx={(theme): SX<Theme> => ({ width: theme.spacing(16), height: theme.spacing(16) })}
         />
 
         <Separator height={4} />

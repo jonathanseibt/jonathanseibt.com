@@ -1,26 +1,28 @@
 {
-  "js/ts.implicitProjectConfig.experimentalDecorators": true,
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.tsserver.maxTsServerMemory": 8192,
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "javascript.preferences.importModuleSpecifier": "non-relative",
   "git.enableSmartCommit": false,
-  "git.showPushSuccessNotification": true,
   "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "files.maxMemoryForLargeFilesMB": 8192,
-  "files.associations": {
-    ".env.example": "env",
-    ".vercelignore": "ignore"
-  },
   "editor.formatOnSave": true,
+  "explorer.compactFolders": false,
+  "breadcrumbs.enabled": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "files.insertFinalNewline": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "javascript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
+  "files.maxMemoryForLargeFilesMB": 8192,
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "git.showPushSuccessNotification": true,
   "editor.renderControlCharacters": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
+  },
+  "files.associations": {
+    ".env.example": "env",
+    ".vercelignore": "ignore"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": {
@@ -41,9 +43,6 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "explorer.compactFolders": false,
-  "breadcrumbs.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
   "colorize.include": [
     "**/*.json",
     "**/*.ts",
@@ -52,5 +51,6 @@
   ],
   "search.exclude": {
     "**/.next": true
-  }
+  },
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
 }

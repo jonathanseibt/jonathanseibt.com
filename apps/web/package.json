@@ -1,28 +1,12 @@
 {
   "name": "@jonathanseibt.com/web",
-  "version": "1.0.0",
   "private": true,
+  "version": "1.0.0",
   "scripts": {
     "dev": "yarn open-cli http://localhost:3000/ | next dev --port 3000",
     "start": "next start",
     "lint": "yarn lint:check-types",
     "lint:check-types": "tsc --noEmit",
     "build": "next build"
-  },
-  "dependencies": {
-    "@emotion/react": "^11.9.0",
-    "@emotion/server": "^11.4.0",
-    "@emotion/styled": "^11.8.1",
-    "@mui/icons-material": "^5.6.2",
-    "@mui/lab": "^5.0.0-alpha.78",
-    "@mui/material": "^5.6.2",
-    "next": "12.1.5",
-    "react": "18.0.0",
-    "react-dom": "18.0.0"
-  },
-  "devDependencies": {
-    "@types/react": "18.0.6",
-    "@types/react-dom": "18.0.2",
-    "open-cli": "^7.0.1"
   }
 }

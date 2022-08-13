@@ -1,13 +1,11 @@
-import { Box } from "@mui/material";
-import { SystemStyleObject } from "@mui/system";
+import { Box, Theme } from "@mui/material";
+import { SystemStyleObject as SX } from "@mui/system";
 
 interface Props {
-  width?: number;
-  height?: number;
+  height?: CSSNumberish;
+  width?: CSSNumberish;
 }
 
-const Separator = ({ width = 0, height = 0 }: Props): JSX.Element => (
-  <Box component='hr' sx={(theme): SystemStyleObject => ({ marginX: theme.spacing(width / 2), marginY: theme.spacing(height / 2) })} />
-);
+const Separator = ({ width = 0, height = 0 }: Props): JSX.Element => <Box component='hr' sx={(theme): SX<Theme> => ({ width: theme.spacing(width), height: theme.spacing(height) })} />;
 
 export default Separator;

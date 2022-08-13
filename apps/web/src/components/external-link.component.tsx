@@ -1,5 +1,5 @@
-import { Link as MuiLink } from "@mui/material";
-import { SystemStyleObject } from "@mui/system";
+import { Link as MuiLink, Theme } from "@mui/material";
+import { SystemStyleObject as SX } from "@mui/system";
 import { ComponentProps } from "react";
 
 type Props = Omit<ComponentProps<typeof MuiLink>, "target" | "rel" | "sx">;
@@ -8,7 +8,7 @@ const ExternalLink = ({ children, ...rest }: Props): JSX.Element => (
   <MuiLink
     target='_blank'
     rel='noreferrer'
-    sx={(theme): SystemStyleObject => ({
+    sx={(theme): SX<Theme> => ({
       textDecoration: "none",
       position: "relative",
       "&::after": {

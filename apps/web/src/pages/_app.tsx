@@ -1,18 +1,18 @@
-import { CacheProvider, EmotionCache } from "@emotion/react";
-import { CssBaseline } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
-import { AppProps } from "next/app";
+import { CacheProvider as EmotionCacheProvider, EmotionCache as EmotionCacheType } from "@emotion/react";
+import { CssBaseline as MuiCssBaseline } from "@mui/material";
+import { ThemeProvider as MuiThemeProvider } from "@mui/material/styles";
+import { AppProps as NextAppProps } from "next/app";
 import Head from "next/head";
 import { getEmotionCache, theme } from "src/core";
 
-interface Props extends AppProps {
-  emotionCache?: EmotionCache;
+interface Props extends NextAppProps {
+  emotionCache?: EmotionCacheType;
 }
 
 const clientSideEmotionCache = getEmotionCache();
 
-const MyApp = ({ Component, pageProps: props, emotionCache = clientSideEmotionCache }: Props): JSX.Element => (
-  <CacheProvider value={emotionCache}>
+const MyApp = ({ Component: App, pageProps: props, emotionCache = clientSideEmotionCache }: Props): JSX.Element => (
+  <EmotionCacheProvider value={emotionCache}>
     <Head>
       <title>Jonathan Seibt • Senior Front End Engineer</title>
       <meta name='description' content="Hey! My name's Jonathan Seibt, and I'm a Senior Front End Engineer." />
@@ -35,11 +35,11 @@ const MyApp = ({ Component, pageProps: props, emotionCache = clientSideEmotionCa
       <meta name='viewport' content='minimum-scale=1, initial-scale=1, width=device-width' />
     </Head>
 
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Component {...props} />
-    </ThemeProvider>
-  </CacheProvider>
+    <MuiThemeProvider theme={theme}>
+      <MuiCssBaseline />
+      <App {...props} />
+    </MuiThemeProvider>
+  </EmotionCacheProvider>
 );
 
 export default MyApp;

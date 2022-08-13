@@ -1,14 +1,14 @@
 import createEmotionServer from "@emotion/server/create-instance";
-import { AppPropsType } from "next/dist/shared/lib/utils";
-import Document, { DocumentInitialProps, Head, Html, Main, NextScript } from "next/document";
-import { NextRouter } from "next/router";
+import { AppPropsType as NextAppPropsType, DocumentContext as NextDocumentContextType } from "next/dist/shared/lib/utils";
+import NextDocument, { DocumentInitialProps as NextDocumentProps, Head, Html, Main, NextScript } from "next/document";
+import { NextRouter as Router } from "next/router";
 import { getEmotionCache, theme } from "src/core";
 
-interface Props extends DocumentInitialProps {
+interface Props extends NextDocumentProps {
   emotionStyleTags: unknown;
 }
 
-export default class MyDocument extends Document {
+export default class MyDocument extends NextDocument {
   render(): JSX.Element {
     const props = this.props as unknown as Props;
 
@@ -36,18 +36,18 @@ export default class MyDocument extends Document {
   }
 }
 
-MyDocument.getInitialProps = async (ctx): Promise<Props> => {
+MyDocument.getInitialProps = async (context: NextDocumentContextType): Promise<Props> => {
   const serverSideEmotionCache = getEmotionCache();
 
   const { extractCriticalToChunks } = createEmotionServer(serverSideEmotionCache);
 
-  const renderPage = ctx.renderPage;
-  ctx.renderPage = (): DocumentInitialProps | Promise<DocumentInitialProps> =>
+  const renderPage = context.renderPage;
+  context.renderPage = (): NextDocumentProps | Promise<NextDocumentProps> =>
     renderPage({
       enhanceApp:
         (
           App,
-        ): ((props: AppPropsType<NextRouter, {}>) => JSX.Element) => // eslint-disable-line @typescript-eslint/ban-types
+        ): ((props: NextAppPropsType<Router, {}>) => JSX.Element) => // eslint-disable-line @typescript-eslint/ban-types
         (props): JSX.Element =>
           (
             <App
@@ -59,7 +59,7 @@ MyDocument.getInitialProps = async (ctx): Promise<Props> => {
           ),
     });
 
-  const initialProps = await Document.getInitialProps(ctx);
+  const initialProps = await NextDocument.getInitialProps(context);
 
   const emotionStyleTags = extractCriticalToChunks(initialProps.html).styles.map(
     (style): JSX.Element => <style data-emotion={`${style.key} ${style.ids.join(" ")}`} key={style.key} dangerouslySetInnerHTML={{ __html: style.css }} />,
