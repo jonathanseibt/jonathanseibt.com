@@ -2,7 +2,7 @@
   "trailingComma": "all",
   "tabWidth": 2,
   "semi": true,
-  "singleQuote": false,
+  "singleQuote": true,
   "printWidth": 200,
   "bracketSameLine": true,
   "jsxSingleQuote": true,
@@ -11,10 +11,20 @@
   "overrides": [
     {
       "files": [
-        "*.json"
+        "*.json",
+        ".prettierrc",
+        ".eslintrc"
       ],
       "options": {
         "printWidth": 0
+      }
+    },
+    {
+      "files": [
+        "*.md"
+      ],
+      "options": {
+        "printWidth": 99999
       }
     }
   ]

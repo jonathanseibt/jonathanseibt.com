@@ -1,11 +1,11 @@
+# Always in .vercelignore file.
 .github
+.npmrc
+tsconfig.tsbuildinfo
+
+# Don't forget: when making changes down here, sync them with the paths-ignore attribute in the workflow.yml file.
 .husky
 .vscode
-.eslintrc.json
-.eslintignore
-.prettierrc.json
-.prettierignore
 files
-tsconfig.tsbuildinfo
-README.md
 LICENSE
+README.md

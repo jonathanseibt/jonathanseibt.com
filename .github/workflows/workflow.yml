@@ -1,0 +1,31 @@
+on:
+  push:
+    branches:
+      - 'main'
+    paths-ignore: # Don't forget: when making changes down here, sync them with the .vercelignore file.
+      - '.husky/**'
+      - '.vscode/**'
+      - 'files'
+      - 'LICENSE'
+      - 'README.md'
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - uses: actions/checkout@v3
+
+      - run: pnpm i --frozen-lockfile
+
+      - run: pnpm lint
+
+      - run: vercel --prod --yes --token ${{ secrets.VERCEL_DEPLOY_TOKEN }}

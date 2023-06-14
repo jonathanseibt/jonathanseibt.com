@@ -1,4 +1,4 @@
-node_modules
-yarn-error.log*
-*.tsbuildinfo
+# Don't forget: when making changes down here, sync them with the .eslintignore and .prettierignore files.
 .next
+node_modules
+tsconfig.tsbuildinfo

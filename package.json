@@ -1,54 +1,63 @@
 {
   "name": "jonathanseibt.com",
   "private": true,
-  "workspaces": {
-    "packages": [
-      "apps/*",
-      "libs/*"
-    ]
+  "license": "MIT",
+  "repository": "https://github.com/jonathanseibt/jonathanseibt.com",
+  "author": {
+    "name": "Jonathan Seibt",
+    "email": "hey@jonathanseibt.com",
+    "url": "https://jonathanseibt.com"
+  },
+  "engines": {
+    "node": "^18",
+    "pnpm": "^8"
   },
   "scripts": {
-    "clean": "git clean -dfX",
-    "postinstall": "husky install",
-    "lint": "yarn lint:eslint && yarn lint:prettier && yarn workspaces run lint",
-    "lint:eslint": "yarn eslint . --fix --ext .js,.jsx,.ts,.tsx,.json",
-    "lint:prettier": "yarn prettier . --write --loglevel error",
-    "dev:web": "yarn workspace @jonathanseibt.com/web run dev",
-    "build:web": "yarn workspace @jonathanseibt.com/web run build"
-  },
-  "lint-staged": {
-    "*": [
-      "bash -c 'yarn lint'"
-    ]
+    "prepare": "is-ci || husky install",
+    "dev": "open-cli http://localhost:3000/ & next dev --port 3000",
+    "start": "open-cli http://localhost:3000/ & next start --port 3000",
+    "build": "next build",
+    "lint": "pnpm lint:prettier & pnpm lint:eslint & pnpm lint:tsc",
+    "lint:prettier": "prettier . --write --loglevel error",
+    "lint:eslint": "eslint . --fix --ext .ts,.tsx --max-warnings 0 --quiet",
+    "lint:tsc": "tsc --noEmit"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/server": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@mui/material": "^5.10.0",
-    "color": "^4.2.3",
-    "http-status-codes": "^2.2.0",
-    "next": "^12.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@emotion/cache": "11.11.0",
+    "@emotion/react": "11.11.1",
+    "@emotion/server": "11.11.0",
+    "@emotion/styled": "11.11.0",
+    "@mui/icons-material": "5.11.16",
+    "@mui/lab": "5.0.0-alpha.133",
+    "@mui/material": "5.13.4",
+    "@mui/system": "5.13.2",
+    "color": "4.2.3",
+    "http-status-codes": "2.2.0",
+    "lodash": "4.17.21",
+    "next": "13.4.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
-    "@types/color": "^3.0.3",
-    "@types/node": "^18.7.2",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
-    "eslint": "^8.16.0",
-    "eslint-plugin-folders": "^1.0.3",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.30.0",
-    "eslint-plugin-react-hooks": "^4.5.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "eslint-plugin-unicorn": "^43.0.2",
-    "husky": "^8.0.1",
-    "lint-staged": "^13.0.3",
-    "open-cli": "^7.0.1",
-    "prettier": "^2.7.1",
-    "typescript": "^4.3.5"
+    "@types/color": "3.0.3",
+    "@types/lodash": "4.14.195",
+    "@types/node": "20.3.0",
+    "@types/react": "18.2.11",
+    "@types/react-dom": "18.2.4",
+    "@typescript-eslint/eslint-plugin": "5.59.9",
+    "@typescript-eslint/parser": "5.59.9",
+    "eslint": "8.42.0",
+    "eslint-config-next": "13.4.5",
+    "eslint-plugin-folders": "1.0.4",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unicorn": "47.0.0",
+    "husky": "8.0.3",
+    "is-ci": "3.0.1",
+    "open-cli": "7.2.0",
+    "prettier": "2.8.8",
+    "typescript": "5.0.2"
   }
 }
