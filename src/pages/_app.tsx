@@ -1,18 +1,18 @@
-import { CacheProvider as EmotionCacheProvider, EmotionCache } from '@emotion/react';
-import { CssBaseline as MuiCssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material';
-import { CONSTANT_APP_DESCRIPTION, CONSTANT_APP_IMAGE, CONSTANT_APP_TITLE, CONSTANT_APP_URL, theme } from '@src/config';
-import { createClientSideEmotionCache } from '@src/core';
-import { AppProps } from 'next/app';
-import NextHead from 'next/head';
+import { CacheProvider as EmotionCacheProvider, EmotionCache } from '@emotion/react'
+import { CssBaseline as MuiCssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
+import { CONSTANT_APP_DESCRIPTION, CONSTANT_APP_IMAGE, CONSTANT_APP_TITLE, CONSTANT_APP_URL, theme } from '@src/config'
+import { createClientSideEmotionCache } from '@src/core'
+import { AppProps } from 'next/app'
+import NextHead from 'next/head'
 
-const clientSideEmotionCache = createClientSideEmotionCache();
+const clientSideEmotionCache = createClientSideEmotionCache()
 
 export interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache;
+  emotionCache?: EmotionCache
 }
 
 export default function MyApp(props: MyAppProps): JSX.Element {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   return (
     <EmotionCacheProvider value={emotionCache}>
@@ -43,5 +43,5 @@ export default function MyApp(props: MyAppProps): JSX.Element {
         <Component {...pageProps} />
       </MuiThemeProvider>
     </EmotionCacheProvider>
-  );
+  )
 }

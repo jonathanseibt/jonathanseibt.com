@@ -1,6 +1,6 @@
-import { Box, ButtonBase, Grid, SX, Typography } from '@mui/material';
-import { ExternalLink, Gap, Image } from '@src/components';
-import Link from 'next/link';
+import { Box, ButtonBase, Grid, SX, Typography } from '@mui/material'
+import { ExternalLink, Gap, Image } from '@src/components'
+import Link from 'next/link'
 
 export default function IndexPage(): JSX.Element {
   return (
@@ -80,5 +80,5 @@ export default function IndexPage(): JSX.Element {
         </Box>
       </Box>
     </Box>
-  );
+  )
 }

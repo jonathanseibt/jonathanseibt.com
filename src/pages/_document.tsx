@@ -1,5 +1,5 @@
-import { GoogleFontAlegreya, theme } from '@src/config';
-import { createServerSideEmotionCache } from '@src/core';
+import { GoogleFontAlegreya, theme } from '@src/config'
+import { createServerSideEmotionCache } from '@src/core'
 import NextDocument, {
   DocumentContext as NextDocumentContext,
   DocumentInitialProps as NextDocumentInitialProps,
@@ -8,22 +8,22 @@ import NextDocument, {
   Html as NextHtml,
   Main as NextMain,
   NextScript,
-} from 'next/document';
+} from 'next/document'
 
 type MyDocumentInitialProps = NextDocumentInitialProps & {
-  emotionCache: JSX.Element[];
-};
+  emotionCache: JSX.Element[]
+}
 
 MyDocument.getInitialProps = async (ctx: NextDocumentContext): Promise<MyDocumentInitialProps> => {
-  const initialProps = await NextDocument.getInitialProps(ctx);
-  const emotionCache = createServerSideEmotionCache(ctx, initialProps);
-  return { ...initialProps, emotionCache };
-};
+  const initialProps = await NextDocument.getInitialProps(ctx)
+  const emotionCache = createServerSideEmotionCache(ctx, initialProps)
+  return { ...initialProps, emotionCache }
+}
 
-type MyDocumentProps = NextDocumentProps & MyDocumentInitialProps;
+type MyDocumentProps = NextDocumentProps & MyDocumentInitialProps
 
 export default function MyDocument(props: MyDocumentProps): JSX.Element {
-  const { emotionCache } = props;
+  const { emotionCache } = props
 
   return (
     <NextHtml lang='en' className={GoogleFontAlegreya.className}>
@@ -40,5 +40,5 @@ export default function MyDocument(props: MyDocumentProps): JSX.Element {
         <NextScript />
       </body>
     </NextHtml>
-  );
+  )
 }

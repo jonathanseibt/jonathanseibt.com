@@ -1,13 +1,13 @@
-import { createTheme as muiCreateTheme, Theme } from '@mui/material';
-import { CSSInterpolation, SystemStyleObject } from '@mui/system';
-import Color from 'color';
-import { Alegreya } from 'next/font/google';
+import { createTheme as muiCreateTheme, Theme } from '@mui/material'
+import { CSSInterpolation, SystemStyleObject } from '@mui/system'
+import Color from 'color'
+import { Alegreya } from 'next/font/google'
 
 declare module '@mui/material' {
-  export type SX = SystemStyleObject<Theme>;
+  export type SX = SystemStyleObject<Theme>
 }
 
-export const GoogleFontAlegreya = Alegreya({ subsets: ['latin'] });
+export const GoogleFontAlegreya = Alegreya({ subsets: ['latin'] })
 
 const theme = muiCreateTheme({
   spacing: 4,
@@ -58,6 +58,6 @@ const theme = muiCreateTheme({
       }),
     },
   },
-});
+})
 
-export default theme;
+export default theme

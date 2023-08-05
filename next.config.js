@@ -10,6 +10,6 @@ const nextConfig = {
       transform: 'lodash/{{member}}',
     },
   },
-};
+}
 
-module.exports = nextConfig;
+module.exports = nextConfig
