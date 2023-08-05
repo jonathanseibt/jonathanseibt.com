@@ -22,15 +22,15 @@ export default function IndexPage(): JSX.Element {
           <Gap vertical={32} />
 
           <Image
-            src='two-fingers-up-emoji.png'
-            alt='Yellow hand emoji, in a 3D way, with two fingers up, like a cool greeting gesture.'
+            src='hand-with-two-fingers-up-emoji.png'
+            alt='Yellow hand emoji, in a 3D style, with two fingers up, like a cool greeting gesture.'
             sx={(theme): SX => ({ width: theme.spacing(16), height: theme.spacing(16) })}
           />
 
           <Gap vertical={4} />
 
           <Typography component='h1' color='primary' fontWeight={700} lineHeight='1.25' variant='h3'>
-            Hey! My name's Jonathan Seibt, and I'm a Software Engineer.
+            Hey! My name is Jonathan Seibt, and I'm an Engineering Manager.
           </Typography>
 
           <Gap vertical={4} />
@@ -43,10 +43,13 @@ export default function IndexPage(): JSX.Element {
 
           <Typography component='h3' color='primary' fontWeight={500} lineHeight='1.75' variant='h5'>
             Hey, how's it going? I'm really happy to have you here! I'm sure I'd like to get to know you better too. Please, feel free to get in touch and connect with me through{' '}
-            <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' fontWeight={700} fontSize='inherit'>
-              LinkedIn
-            </Typography>
-            . There you can find out more about me too, and we can have a good virtual coffee together. What do you think?
+            <Box display='inline-table'>
+              <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' fontWeight={700} fontSize='inherit'>
+                LinkedIn
+              </Typography>
+              .
+            </Box>{' '}
+            There you can find out more about me too, and we can have a good virtual coffee together. What do you think?
           </Typography>
 
           <Gap vertical={32} />
