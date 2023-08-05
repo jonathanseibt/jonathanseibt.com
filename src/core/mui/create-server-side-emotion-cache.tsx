@@ -15,8 +15,7 @@ export default function createServerSideEmotionCache(ctx: NextDocumentContext, i
     renderPage({
       enhanceApp:
         (App: ComponentType<ComponentProps<NextAppType> & MyAppProps>): ((props: NextAppPropsType<NextRouter>) => JSX.Element) =>
-        (props): JSX.Element =>
-          <App emotionCache={emotionCache} {...props} />,
+        (props): JSX.Element => <App emotionCache={emotionCache} {...props} />,
     })
 
   return extractCriticalToChunks(initialProps.html).styles.map(
