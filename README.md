@@ -1,6 +1,8 @@
 <div align="center">
 
-[![jonathanseibt.com Logo](https://user-images.githubusercontent.com/56838120/113348969-b5452e80-930d-11eb-98dc-0b9fdece8bb8.png)](https://jonathanseibt.com)
+[![jonathanseibt.com dark logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/39834296-e635-459e-8100-6b162dc611c7#gh-light-mode-only)](https://jonathanseibt.com)
+
+[![jonathanseibt.com light logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/a54ea4ba-53e2-4338-b1e8-b4119b93ba4a#gh-dark-mode-only)](https://jonathanseibt.com)
 
 [jonathanseibt.com](https://jonathanseibt.com)
 
