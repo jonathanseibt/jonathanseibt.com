@@ -29,7 +29,7 @@ export default function MyDocument(props: MyDocumentProps): JSX.Element {
     <NextHtml lang='en' className={GoogleFontAlegreya.className}>
       <NextHead>
         <meta name='theme-color' content={theme.palette.primary.main} />
-        <link rel='shortcut icon' href='/favicon.ico' />
+        <link rel='shortcut icon' href='/favicon.ico?v1' />
 
         <meta name='emotion-cache' content='' />
         {emotionCache}

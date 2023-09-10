@@ -9,7 +9,7 @@ export default function IndexPage(): JSX.Element {
         <Link href='/' passHref>
           <ButtonBase disableRipple>
             <Image
-              src='jonathan-seibt-logo.png'
+              src='jonathan-seibt-logo.png?v1'
               alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
               sx={(theme): SX => ({ width: theme.spacing(64), maxWidth: '50vw' })}
             />
@@ -22,7 +22,7 @@ export default function IndexPage(): JSX.Element {
           <Gap vertical={32} />
 
           <Image
-            src='hand-with-two-fingers-up-emoji.png'
+            src='hand-with-two-fingers-up-emoji.png?v1'
             alt='Yellow hand emoji, in a 3D style, with two fingers up, like a cool greeting gesture.'
             sx={(theme): SX => ({ width: theme.spacing(16), height: theme.spacing(16) })}
           />
