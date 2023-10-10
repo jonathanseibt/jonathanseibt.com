@@ -14,15 +14,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v3 # https://github.com/actions/setup-node
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v2
+      - uses: pnpm/action-setup@v2 # https://github.com/pnpm/action-setup
         with:
           version: 8
 
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4 # https://github.com/actions/checkout
 
       - run: pnpm i --frozen-lockfile
 

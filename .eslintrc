@@ -1,11 +1,6 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "env": {
-    "browser": true,
-    "commonjs": true,
-    "es2020": true
-  },
   "plugins": [
     "react",
     "@typescript-eslint",
