@@ -1,19 +1,16 @@
-import { Box, ButtonBase, Grid, SX, Typography } from '@mui/material'
-import { ExternalLink, Gap, Image } from '@src/components'
+import { Box, Grid, Typography } from '@mui/material'
+import ImageHandWithTwoFingersUpEmoji from '@public/hand-with-two-fingers-up-emoji.png'
+import ImageJonathanSeibtLogo from '@public/jonathan-seibt-logo.png'
+import { ExternalLink, Gap } from '@src/components'
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function IndexPage(): JSX.Element {
   return (
     <Box padding={{ xs: 8, sm: 16 }}>
       <Box component='header'>
-        <Link href='/' passHref>
-          <ButtonBase disableRipple>
-            <Image
-              src='jonathan-seibt-logo.png?v1'
-              alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
-              sx={(theme): SX => ({ width: theme.spacing(64), maxWidth: '50vw' })}
-            />
-          </ButtonBase>
+        <Link href='/' style={{ display: 'flex' }}>
+          <Image width={256} src={ImageJonathanSeibtLogo} alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.' />
         </Link>
       </Box>
 
@@ -21,11 +18,7 @@ export default function IndexPage(): JSX.Element {
         <Grid container item spacing={0} md={6} flexDirection='column'>
           <Gap vertical={32} />
 
-          <Image
-            src='hand-with-two-fingers-up-emoji.png?v1'
-            alt='Yellow hand emoji, in a 3D style, with two fingers up, like a cool greeting gesture.'
-            sx={(theme): SX => ({ width: theme.spacing(16), height: theme.spacing(16) })}
-          />
+          <Image width={64} src={ImageHandWithTwoFingersUpEmoji} alt='Yellow hand emoji, in a 3D style, with two fingers up, like a cool greeting gesture.' />
 
           <Gap vertical={4} />
 
