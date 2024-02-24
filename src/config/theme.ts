@@ -1,15 +1,12 @@
-import { createTheme as muiCreateTheme, Theme } from '@mui/material'
-import { CSSInterpolation, SystemStyleObject } from '@mui/system'
+import { createTheme, CSSInterpolation } from '@mui/material'
 import Color from 'color'
 import { Alegreya } from 'next/font/google'
 
-declare module '@mui/material' {
-  export type SX = SystemStyleObject<Theme>
-}
+export const FontFamilyPrimary = Alegreya({
+  subsets: ['latin'],
+})
 
-export const GoogleFontAlegreya = Alegreya({ subsets: ['latin'] })
-
-const theme = muiCreateTheme({
+const theme = createTheme({
   spacing: 4,
   palette: {
     primary: {
@@ -20,13 +17,16 @@ const theme = muiCreateTheme({
     },
   },
   typography: {
-    fontFamily: GoogleFontAlegreya.style.fontFamily,
+    fontFamily: FontFamilyPrimary.style.fontFamily,
   },
   components: {
     MuiCssBaseline: {
       styleOverrides: (theme): CSSInterpolation => ({
         '::selection': {
           background: Color(theme.palette.primary.main).alpha(0.5).hexa(),
+        },
+        img: {
+          display: 'block',
         },
         figure: {
           display: 'contents',
@@ -54,6 +54,23 @@ const theme = muiCreateTheme({
           marginInlineStart: 'unset',
           marginInlineEnd: 'unset',
           paddingInlineStart: 'unset',
+        },
+        '@keyframes wave': {
+          '0%,to': {
+            transform: 'rotate(0deg)',
+          },
+          '25%': {
+            transform: 'rotate(10deg)',
+          },
+          '50%': {
+            transform: 'rotate(-10deg)',
+          },
+          '75%': {
+            transform: 'rotate(5deg)',
+          },
+        },
+        '.animation-wave': {
+          animation: 'wave 2s infinite',
         },
       }),
     },

@@ -15,8 +15,22 @@
     "plugin:@typescript-eslint/recommended",
     "next"
   ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
   "rules": {
+    "@typescript-eslint/no-namespace": [
+      "off"
+    ],
+    "react/react-in-jsx-scope": [
+      "off"
+    ],
     "react/no-unescaped-entities": [
+      "off"
+    ],
+    "no-extra-semi": [
       "off"
     ],
     "quotes": [
@@ -108,6 +122,15 @@
         ]
       }
     ],
+    "object-curly-newline": [
+      "error",
+      {
+        "ObjectExpression": "always",
+        "ObjectPattern": {
+          "multiline": true
+        }
+      }
+    ],
     "no-restricted-syntax": [
       "error",
       {
@@ -134,5 +157,18 @@
         "case": "kebabCase"
       }
     ]
-  }
+  },
+  "overrides": [
+    {
+      "files": "*.js",
+      "rules": {
+        "@typescript-eslint/explicit-function-return-type": [
+          "off"
+        ],
+        "@typescript-eslint/no-var-requires": [
+          "off"
+        ]
+      }
+    }
+  ]
 }

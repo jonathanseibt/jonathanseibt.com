@@ -1,13 +1,13 @@
-import { Link as MuiLink, SX } from '@mui/material'
-import { ComponentProps } from 'react'
+import { Link, SX } from '@mui/material'
+import { CP } from 'react'
 
-type ExternalLinkProps = ComponentProps<typeof MuiLink>
+type TExternalLinkProps = CP<typeof Link>
 
-export default function ExternalLink(props: ExternalLinkProps): JSX.Element {
+export default function ExternalLink(props: TExternalLinkProps): JSX.Element {
   const { target = '_blank', rel = 'noreferrer', sx, children, ...rest } = props
 
   return (
-    <MuiLink
+    <Link
       target={target}
       rel={rel}
       sx={
@@ -36,6 +36,6 @@ export default function ExternalLink(props: ExternalLinkProps): JSX.Element {
       }
       {...rest}>
       {children}
-    </MuiLink>
+    </Link>
   )
 }

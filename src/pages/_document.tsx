@@ -1,44 +1,48 @@
-import { GoogleFontAlegreya, theme } from '@src/config'
+import { FontFamilyPrimary, theme } from '@src/config'
 import { createServerSideEmotionCache } from '@src/core'
 import NextDocument, {
-  DocumentContext as NextDocumentContext,
-  DocumentInitialProps as NextDocumentInitialProps,
-  DocumentProps as NextDocumentProps,
-  Head as NextHead,
-  Html as NextHtml,
-  Main as NextMain,
+  DocumentContext,
+  DocumentInitialProps,
+  DocumentProps,
+  Head,
+  Html,
+  Main,
   NextScript,
 } from 'next/document'
 
-type MyDocumentInitialProps = NextDocumentInitialProps & {
-  emotionCache: JSX.Element[]
+interface TMyDocumentInitialProps extends DocumentInitialProps {
+  cache: JSX.Element[]
 }
 
-MyDocument.getInitialProps = async (ctx: NextDocumentContext): Promise<MyDocumentInitialProps> => {
-  const initialProps = await NextDocument.getInitialProps(ctx)
-  const emotionCache = createServerSideEmotionCache(ctx, initialProps)
-  return { ...initialProps, emotionCache }
+MyDocument.getInitialProps = async (ctx: DocumentContext): Promise<TMyDocumentInitialProps> => {
+  const props = await NextDocument.getInitialProps(ctx)
+  const cache = createServerSideEmotionCache(ctx, props)
+
+  return {
+    ...props,
+    cache,
+  }
 }
 
-type MyDocumentProps = NextDocumentProps & MyDocumentInitialProps
+type TMyDocumentProps = TMyDocumentInitialProps & DocumentProps
 
-export default function MyDocument(props: MyDocumentProps): JSX.Element {
-  const { emotionCache } = props
+export default function MyDocument(props: TMyDocumentProps): JSX.Element {
+  const { cache } = props
 
   return (
-    <NextHtml lang='en' className={GoogleFontAlegreya.className}>
-      <NextHead>
+    <Html lang='en' className={FontFamilyPrimary.className}>
+      <Head>
         <meta name='theme-color' content={theme.palette.primary.main} />
         <link rel='shortcut icon' href='/favicon.ico?v1' />
 
         <meta name='emotion-cache' content='' />
-        {emotionCache}
-      </NextHead>
+        {cache}
+      </Head>
 
       <body>
-        <NextMain />
+        <Main />
         <NextScript />
       </body>
-    </NextHtml>
+    </Html>
   )
 }

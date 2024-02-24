@@ -40,7 +40,7 @@ Install [pnpm](https://pnpm.io) (version `^8`).
 
 `pnpm i`
 
-> _At this step, pnpm will install and self-manage the required Node.js version (`18.16.0`)._
+> _At this step, pnpm will install and self-manage the required Node.js version (`18.19.1`)._
 
 ### 4. Run
 

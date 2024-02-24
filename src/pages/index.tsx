@@ -7,10 +7,22 @@ import Link from 'next/link'
 
 export default function IndexPage(): JSX.Element {
   return (
-    <Box padding={{ xs: 8, sm: 16 }}>
+    <Box
+      padding={{
+        xs: 8,
+        sm: 16,
+      }}>
       <Box component='header'>
-        <Link href='/' style={{ display: 'flex' }}>
-          <Image width={256} src={ImageJonathanSeibtLogo} alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.' />
+        <Link
+          href='/'
+          style={{
+            display: 'flex',
+          }}>
+          <Image
+            width={256}
+            src={ImageJonathanSeibtLogo}
+            alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
+          />
         </Link>
       </Box>
 
@@ -18,7 +30,12 @@ export default function IndexPage(): JSX.Element {
         <Grid container item spacing={0} md={6} flexDirection='column'>
           <Gap vertical={32} />
 
-          <Image width={64} src={ImageHandWithTwoFingersUpEmoji} alt='Yellow hand emoji, in a 3D style, with two fingers up, like a cool greeting gesture.' />
+          <Image
+            width={64}
+            src={ImageHandWithTwoFingersUpEmoji}
+            alt='Yellow hand emoji, in a 3D style, with two fingers up, like a cool greeting gesture.'
+            className='animation-wave'
+          />
 
           <Gap vertical={4} />
 
@@ -35,14 +52,19 @@ export default function IndexPage(): JSX.Element {
           <Gap vertical={16} />
 
           <Typography component='h3' color='primary' fontWeight={500} lineHeight='1.75' variant='h5'>
-            Hey, how's it going? I'm really happy to have you here! I'm sure I'd like to get to know you better too. Please, feel free to get in touch and connect with me through{' '}
+            Hey, how's it going? I'm really happy to have you here! I'm sure I'd like to get to know you better too.
+            Please, feel free to get in touch and connect with me through{' '}
             <Box display='inline-table'>
-              <Typography component={ExternalLink} href='https://www.linkedin.com/in/jonathanseibt' fontWeight={700} fontSize='inherit'>
+              <Typography
+                component={ExternalLink}
+                href='https://www.linkedin.com/in/jonathanseibt'
+                fontWeight={700}
+                fontSize='inherit'>
                 LinkedIn
               </Typography>
               .
             </Box>{' '}
-            There you can find out more about me too, and we can have a good virtual coffee together. What do you think?
+            There you can find out more about me, and we can have a good virtual coffee together. What do you think?
           </Typography>
 
           <Gap vertical={32} />
@@ -53,19 +75,34 @@ export default function IndexPage(): JSX.Element {
         <Box component='nav'>
           <Grid component='ul' container spacing={8}>
             <Grid component='li' item>
-              <Typography component={ExternalLink} variant='body1' color='primary' fontWeight={600} href='https://www.linkedin.com/in/jonathanseibt'>
+              <Typography
+                component={ExternalLink}
+                variant='body1'
+                color='primary'
+                fontWeight={600}
+                href='https://www.linkedin.com/in/jonathanseibt'>
                 LinkedIn
               </Typography>
             </Grid>
 
             <Grid component='li' item>
-              <Typography component={ExternalLink} variant='body1' color='primary' fontWeight={600} href='https://github.com/jonathanseibt'>
+              <Typography
+                component={ExternalLink}
+                variant='body1'
+                color='primary'
+                fontWeight={600}
+                href='https://github.com/jonathanseibt'>
                 GitHub
               </Typography>
             </Grid>
 
             <Grid component='li' item>
-              <Typography component={ExternalLink} variant='body1' color='primary' fontWeight={600} href='https://github.com/jonathanseibt/jonathanseibt.com'>
+              <Typography
+                component={ExternalLink}
+                variant='body1'
+                color='primary'
+                fontWeight={600}
+                href='https://github.com/jonathanseibt/jonathanseibt.com'>
                 Source code
               </Typography>
             </Grid>

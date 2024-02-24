@@ -1,22 +1,29 @@
-import { CacheProvider as EmotionCacheProvider, EmotionCache } from '@emotion/react'
-import { CssBaseline as MuiCssBaseline, ThemeProvider as MuiThemeProvider } from '@mui/material'
-import { CONST_APP_DESCRIPTION, CONST_APP_IMAGE, CONST_APP_TITLE, CONST_APP_TWITTER_CREATOR, CONST_APP_URL, theme } from '@src/config'
+import { CacheProvider, EmotionCache } from '@emotion/react'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import {
+  CONST_APP_DESCRIPTION,
+  CONST_APP_IMAGE,
+  CONST_APP_TITLE,
+  CONST_APP_TWITTER_CREATOR,
+  CONST_APP_URL,
+  theme,
+} from '@src/config'
 import { createClientSideEmotionCache } from '@src/core'
 import { AppProps } from 'next/app'
-import NextHead from 'next/head'
+import Head from 'next/head'
 
 const clientSideEmotionCache = createClientSideEmotionCache()
 
-export interface MyAppProps extends AppProps {
+export interface TMyAppProps extends AppProps {
   emotionCache?: EmotionCache
 }
 
-export default function MyApp(props: MyAppProps): JSX.Element {
+export default function MyApp(props: TMyAppProps): JSX.Element {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props
 
   return (
-    <EmotionCacheProvider value={emotionCache}>
-      <NextHead>
+    <CacheProvider value={emotionCache}>
+      <Head>
         <title>{CONST_APP_TITLE}</title>
 
         <meta name='viewport' content='initial-scale=1, width=device-width' />
@@ -41,12 +48,12 @@ export default function MyApp(props: MyAppProps): JSX.Element {
         <meta name='twitter:widgets:new-embed-design' content='on' />
 
         <link rel='canonical' href={CONST_APP_URL} />
-      </NextHead>
+      </Head>
 
-      <MuiThemeProvider theme={theme}>
-        <MuiCssBaseline />
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Component {...pageProps} />
-      </MuiThemeProvider>
-    </EmotionCacheProvider>
+      </ThemeProvider>
+    </CacheProvider>
   )
 }

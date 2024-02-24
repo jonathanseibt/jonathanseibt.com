@@ -7,7 +7,8 @@
     "**/.husky/*": "shellscript"
   },
   "files.exclude": {
-    "**/.husky/_": true
+    "**/.husky/_": true,
+    "**/tsconfig.tsbuildinfo": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": false,

@@ -1,11 +1,11 @@
 import { Box } from '@mui/material'
 
-interface GapProps {
+interface TGapProps {
   horizontal?: number
   vertical?: number
 }
 
-export default function Gap(props: GapProps): JSX.Element {
+export default function Gap(props: TGapProps): JSX.Element {
   const { horizontal, vertical } = props
 
   return (

@@ -14,11 +14,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-node@v3 # https://github.com/actions/setup-node
+      - uses: actions/setup-node@v4 # https://github.com/actions/setup-node
         with:
           node-version: 18
 
-      - uses: pnpm/action-setup@v2 # https://github.com/pnpm/action-setup
+      - uses: pnpm/action-setup@v3 # https://github.com/pnpm/action-setup
         with:
           version: 8
 
