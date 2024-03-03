@@ -23,9 +23,7 @@ export default function createServerSideEmotionCache(ctx: DocumentContext, props
       <style
         key={style.key}
         data-emotion={`${style.key} ${style.ids.join(' ')}`}
-        dangerouslySetInnerHTML={{
-          __html: style.css,
-        }}
+        dangerouslySetInnerHTML={{ __html: style.css }}
       />
     ),
   )

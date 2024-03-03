@@ -18,10 +18,7 @@ MyDocument.getInitialProps = async (ctx: DocumentContext): Promise<TMyDocumentIn
   const props = await NextDocument.getInitialProps(ctx)
   const cache = createServerSideEmotionCache(ctx, props)
 
-  return {
-    ...props,
-    cache,
-  }
+  return { ...props, cache }
 }
 
 type TMyDocumentProps = TMyDocumentInitialProps & DocumentProps

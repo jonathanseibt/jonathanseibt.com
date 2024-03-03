@@ -7,17 +7,9 @@ import Link from 'next/link'
 
 export default function IndexPage(): JSX.Element {
   return (
-    <Box
-      padding={{
-        xs: 8,
-        sm: 16,
-      }}>
+    <Box padding={{ xs: 8, sm: 16 }}>
       <Box component='header'>
-        <Link
-          href='/'
-          style={{
-            display: 'flex',
-          }}>
+        <Link href='/' style={{ display: 'flex' }}>
           <Image
             width={256}
             src={ImageJonathanSeibtLogo}

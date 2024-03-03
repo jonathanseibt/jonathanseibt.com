@@ -2,9 +2,7 @@ import { createTheme, CSSInterpolation } from '@mui/material'
 import Color from 'color'
 import { Alegreya } from 'next/font/google'
 
-export const FontFamilyPrimary = Alegreya({
-  subsets: ['latin'],
-})
+export const FontFamilyPrimary = Alegreya({ subsets: ['latin'] })
 
 const theme = createTheme({
   spacing: 4,

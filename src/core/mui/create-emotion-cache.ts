@@ -9,8 +9,5 @@ export default function createEmotionCache(): EmotionCache {
     insertionPoint = emotionInsertionPoint ?? undefined
   }
 
-  return createCache({
-    key: 'mui',
-    insertionPoint,
-  })
+  return createCache({ key: 'mui', insertionPoint })
 }
