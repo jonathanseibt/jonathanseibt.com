@@ -49,7 +49,7 @@ export default function IndexPage(): JSX.Element {
             <Box display='inline-table'>
               <Typography
                 component={ExternalLink}
-                href='https://www.linkedin.com/in/jonathanseibt'
+                href='https://goto.jonathanseibt.com/linkedin'
                 fontWeight={700}
                 fontSize='inherit'>
                 LinkedIn
@@ -72,7 +72,7 @@ export default function IndexPage(): JSX.Element {
                 variant='body1'
                 color='primary'
                 fontWeight={600}
-                href='https://www.linkedin.com/in/jonathanseibt'>
+                href='https://goto.jonathanseibt.com/linkedin'>
                 LinkedIn
               </Typography>
             </Grid>
@@ -83,19 +83,8 @@ export default function IndexPage(): JSX.Element {
                 variant='body1'
                 color='primary'
                 fontWeight={600}
-                href='https://github.com/jonathanseibt'>
+                href='https://goto.jonathanseibt.com/github'>
                 GitHub
-              </Typography>
-            </Grid>
-
-            <Grid component='li' item>
-              <Typography
-                component={ExternalLink}
-                variant='body1'
-                color='primary'
-                fontWeight={600}
-                href='https://github.com/jonathanseibt/jonathanseibt.com'>
-                Source code
               </Typography>
             </Grid>
           </Grid>

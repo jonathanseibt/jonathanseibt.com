@@ -1,10 +1,10 @@
 <div align="center">
 
-[![jonathanseibt.com dark logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/39834296-e635-459e-8100-6b162dc611c7#gh-light-mode-only)](https://jonathanseibt.com)
+[![jonathanseibt.com dark logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/39834296-e635-459e-8100-6b162dc611c7#gh-light-mode-only)](https://goto.jonathanseibt.com/site)
 
-[![jonathanseibt.com light logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/a54ea4ba-53e2-4338-b1e8-b4119b93ba4a#gh-dark-mode-only)](https://jonathanseibt.com)
+[![jonathanseibt.com light logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/a54ea4ba-53e2-4338-b1e8-b4119b93ba4a#gh-dark-mode-only)](https://goto.jonathanseibt.com/site)
 
-[jonathanseibt.com](https://jonathanseibt.com)
+[jonathanseibt.com](https://goto.jonathanseibt.com/site)
 
 [![jonathanseibt.com Powered By Vercel](https://img.shields.io/static/v1?label=powered%20by&message=vercel&color=black&labelColor=black&logoColor=white&style=for-the-badge&logo=vercel&link=https://vercel.com/jonathanseibt/jonathanseibt-com)](https://vercel.com/jonathanseibt/jonathanseibt-com)
 
