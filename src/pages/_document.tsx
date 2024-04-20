@@ -11,7 +11,7 @@ import NextDocument, {
 } from 'next/document'
 
 interface TMyDocumentInitialProps extends DocumentInitialProps {
-  cache: JSX.Element[]
+  cache: Array<JSX.Element>
 }
 
 MyDocument.getInitialProps = async (ctx: DocumentContext): Promise<TMyDocumentInitialProps> => {

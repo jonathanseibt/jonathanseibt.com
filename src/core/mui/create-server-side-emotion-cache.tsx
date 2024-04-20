@@ -5,7 +5,10 @@ import { AppPropsType, AppType, DocumentContext, DocumentInitialProps } from 'ne
 import { Router } from 'next/router'
 import { CP, CT } from 'react'
 
-export default function createServerSideEmotionCache(ctx: DocumentContext, props: DocumentInitialProps): JSX.Element[] {
+export default function createServerSideEmotionCache(
+  ctx: DocumentContext,
+  props: DocumentInitialProps,
+): Array<JSX.Element> {
   const emotionCache = createEmotionCache()
 
   const renderPage = ctx.renderPage

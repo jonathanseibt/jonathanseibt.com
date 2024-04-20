@@ -1,8 +1,10 @@
 <div align="center">
 
-[![jonathanseibt.com dark logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/39834296-e635-459e-8100-6b162dc611c7#gh-light-mode-only)](https://goto.jonathanseibt.com/site)
-
-[![jonathanseibt.com light logo](https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/a54ea4ba-53e2-4338-b1e8-b4119b93ba4a#gh-dark-mode-only)](https://goto.jonathanseibt.com/site)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/a54ea4ba-53e2-4338-b1e8-b4119b93ba4a">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/39834296-e635-459e-8100-6b162dc611c7">
+  <img alt="jonathanseibt.com logo" src="https://github.com/jonathanseibt/jonathanseibt.com/assets/56838120/39834296-e635-459e-8100-6b162dc611c7">
+</picture>
 
 [jonathanseibt.com](https://goto.jonathanseibt.com/site)
 
@@ -40,7 +42,7 @@ Install [pnpm](https://pnpm.io) (version `^8`).
 
 `pnpm i`
 
-> _At this step, pnpm will install and self-manage the required Node.js version (`18.19.1`)._
+> _At this step, pnpm will install and self-manage the required Node.js version (`20.12.2`)._
 
 ### 4. Run
 
