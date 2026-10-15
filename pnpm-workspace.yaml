@@ -1,0 +1,12 @@
+packages:
+  - apps/*
+  - packages/*
+onlyBuiltDependencies:
+  - '@firebase/util'
+  - '@sentry/cli'
+  - msgpackr-extract
+  - protobufjs
+  - sharp
+  - esbuild
+  - msw
+  - unrs-resolver

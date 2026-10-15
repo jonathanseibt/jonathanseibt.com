@@ -1,0 +1,28 @@
+{
+  "name": "@steelnobre/eslint-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base": "./base.js",
+    "./next": "./next.js"
+  },
+  "scripts": {
+    "lint": "pnpm lint:eslint && pnpm lint:tsc",
+    "lint:eslint": "NODE_OPTIONS=--no-warnings eslint . --fix --max-warnings 0",
+    "lint:tsc": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@steelnobre/typescript-config": "workspace:*",
+    "@typescript-eslint/parser": "^8.60.1",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "16.2.7",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-simple-import-sort": "^13.0.0",
+    "eslint-plugin-unused-imports": "^4.4.1",
+    "prettier": "^3.8.3",
+    "typescript": "~6.0.3",
+    "typescript-eslint": "^8.60.1"
+  }
+}

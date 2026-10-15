@@ -1,9 +1,0 @@
-# Don't forget: when making changes down here, sync them with the .prettierignore file.
-files
-LICENSE
-pnpm-lock.yaml
-
-# Don't forget: when making changes down here, sync them with the .gitignore file.
-.next
-node_modules
-tsconfig.tsbuildinfo

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://v2-9-18.turborepo.dev/schema.json",
+  "tasks": {
+    "transit": {
+      "dependsOn": [
+        "^transit"
+      ],
+      "cache": false
+    },
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ],
+      "cache": false
+    },
+    "lint": {
+      "dependsOn": [
+        "transit"
+      ],
+      "cache": false
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "interactive": true
+    }
+  }
+}

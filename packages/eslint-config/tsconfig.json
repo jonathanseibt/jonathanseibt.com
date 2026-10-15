@@ -1,0 +1,12 @@
+{
+  "extends": "../../packages/typescript-config/src/base.json",
+  "compilerOptions": {
+    "allowJs": true
+  },
+  "include": [
+    "**/*.js"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

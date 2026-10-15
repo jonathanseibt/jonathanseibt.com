@@ -1,61 +1,31 @@
 {
-  "name": "jonathanseibt.com",
+  "name": "steelnobre",
   "private": true,
-  "license": "MIT",
-  "repository": "https://github.com/jonathanseibt/jonathanseibt.com",
   "author": {
     "name": "Jonathan Seibt",
     "email": "hey@jonathanseibt.com",
     "url": "https://jonathanseibt.com"
   },
+  "packageManager": "pnpm@10.34.3",
   "engines": {
-    "node": "^20",
-    "pnpm": "^8"
+    "node": "24.x",
+    "pnpm": "^10"
   },
   "scripts": {
-    "prepare": "is-ci || husky",
-    "full-bump": "npx --yes shx rm -rf pnpm-lock.yaml && pnpm update --latest",
-    "dev": "open-cli http://localhost:3000/ & next dev --port 3000",
-    "start": "open-cli http://localhost:3000/ & next start --port 3000",
-    "build": "next build",
-    "lint": "pnpm lint:prettier & pnpm lint:eslint & pnpm lint:tsc",
-    "lint:prettier": "prettier . --write --log-level error",
-    "lint:eslint": "eslint . --fix --ext .js,.cjs,.mjs,.ts,.tsx --max-warnings 0",
-    "lint:tsc": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@emotion/cache": "11.11.0",
-    "@emotion/react": "11.11.4",
-    "@emotion/server": "11.11.0",
-    "@emotion/styled": "11.11.5",
-    "@mui/icons-material": "5.15.15",
-    "@mui/lab": "5.0.0-alpha.170",
-    "@mui/material": "5.15.15",
-    "@mui/system": "5.15.15",
-    "color": "4.2.3",
-    "next": "14.2.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sharp": "0.33.3"
+    "prepare": "npx -y is-ci || npx skills experimental_install -y",
+    "clear": "rm -rf **/node_modules && git clean -dfx -e '.env'",
+    "kill-port": "sh -c 'lsof -ti tcp:$0 | xargs kill -9 2>/dev/null || true'",
+    "dev": "pnpm kill-port 3000 && pnpm --filter @steelnobre/web dev",
+    "build": "pnpm --filter @steelnobre/web build",
+    "start": "pnpm kill-port 3000 && pnpm --filter @steelnobre/web start",
+    "lint": "turbo run lint && pnpm lint:prettier",
+    "lint:prettier": "prettier . --write --ignore-path .prettierignore --log-level error"
   },
   "devDependencies": {
-    "@types/color": "3.0.6",
-    "@types/node": "20.12.7",
-    "@types/react": "18.2.79",
-    "@types/react-dom": "18.2.25",
-    "@typescript-eslint/eslint-plugin": "7.7.0",
-    "@typescript-eslint/parser": "7.7.0",
-    "eslint": "8.57.0",
-    "eslint-config-next": "14.2.2",
-    "eslint-plugin-folders": "1.0.4",
-    "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-react": "7.34.1",
-    "eslint-plugin-simple-import-sort": "12.1.0",
-    "eslint-plugin-unicorn": "52.0.0",
-    "husky": "9.0.11",
-    "is-ci": "3.0.1",
-    "open-cli": "8.0.0",
-    "prettier": "3.2.5",
-    "typescript": "5.4.5"
+    "@steelnobre/eslint-config": "workspace:*",
+    "@steelnobre/typescript-config": "workspace:*",
+    "eslint": "^9.39.4",
+    "prettier": "^3.8.3",
+    "turbo": "^2.9.18"
   }
 }

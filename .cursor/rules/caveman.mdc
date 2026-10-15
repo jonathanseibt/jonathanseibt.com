@@ -1,0 +1,6 @@
+---
+description: Caveman mode
+alwaysApply: true
+---
+
+All agent responses in this repo use **caveman** mode in **ultra** (use `/caveman ultra`) unless user says `stop caveman` or `normal mode`.

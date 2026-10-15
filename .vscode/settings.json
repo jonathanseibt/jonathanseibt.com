@@ -1,26 +1,17 @@
 {
+  "json.schemaDownload.enable": true,
+  "tailwindCSS.lint.suggestCanonicalClasses": "ignore",
   "files.associations": {
-    "package.json": "json",
-    ".env": "dotenv",
-    ".env.*": "dotenv",
-    ".*ignore": "ignore",
-    "**/.husky/*": "shellscript"
+    "**/llms.txt": "markdown",
+    "**/.vercelignore": "ignore"
   },
-  "files.exclude": {
-    "**/.husky/_": true,
-    "**/tsconfig.tsbuildinfo": true
-  },
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": false,
-  "editor.detectIndentation": false,
+  "css.lint.unknownAtRules": "ignore",
   "editor.formatOnSave": true,
-  "editor.renderControlCharacters": true,
-  "editor.tabSize": 2,
-  "files.insertFinalNewline": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
   "files.trimTrailingWhitespace": true,
-  "javascript.preferences.importModuleSpecifier": "non-relative",
-  "typescript.preferences.importModuleSpecifier": "non-relative",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true
 }

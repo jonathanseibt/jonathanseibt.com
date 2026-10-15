@@ -1,0 +1,41 @@
+{
+  "name": "@steelnobre/web",
+  "version": "0.0.0",
+  "private": true,
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "build": "next build",
+    "dev": "rm -rf .next && next dev -p 3000",
+    "start": "next start -p 3000",
+    "lint": "pnpm lint:tsc && pnpm lint:eslint && (is-ci || pnpm lint:optimizer)",
+    "lint:tsc": "tsc --noEmit",
+    "lint:eslint": "NODE_OPTIONS=--no-warnings eslint . --fix --max-warnings 0",
+    "lint:optimizer": "tsx scripts/optimizer.ts 'public'"
+  },
+  "dependencies": {
+    "@vercel/analytics": "^2.0.1",
+    "lenis": "^1.3.27",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-dom": "19.2.6",
+    "schema-dts": "^2.0.0",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@steelnobre/eslint-config": "workspace:*",
+    "@steelnobre/typescript-config": "workspace:*",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9.39.4",
+    "glob": "^13.0.6",
+    "is-ci": "^4.1.0",
+    "prettier": "^3.8.3",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.5",
+    "typescript": "~6.0.3"
+  }
+}

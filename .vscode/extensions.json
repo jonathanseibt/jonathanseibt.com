@@ -1,6 +1,12 @@
 {
   "recommendations": [
+    "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "GitHub.vscode-pull-request-github",
+    "mikestead.dotenv",
+    "jock.svg",
+    "bradlc.vscode-tailwindcss",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml"
   ]
 }

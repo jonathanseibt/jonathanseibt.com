@@ -1,0 +1,9 @@
+{
+  "extends": "./src/base.json",
+  "include": [
+    "index.d.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

@@ -1,9 +1,23 @@
-# Don't forget: when making changes down here, sync them with the .eslintignore file.
-files
-LICENSE
-pnpm-lock.yaml
-
-# Don't forget: when making changes down here, sync them with the .gitignore file.
-.next
+# SECTION:72&Qg Don't forget to keep .gitignore (SECTION:8!c6A) and packages/eslint-config/base.js (SECTION:&k9FB) in sync.
 node_modules
-tsconfig.tsbuildinfo
+.agents
+.turbo
+dist
+.next
+.expo
+.vercel
+*.log
+*.tsbuildinfo
+.DS_Store
+out
+build
+next-env.d.ts
+expo-env.d.ts
+uniwind-types.d.ts
+ios
+android
+
+# SECTION:9@CsC Don't forget to keep packages/eslint-config/base.js (SECTION:!j6Np) in sync.
+pnpm-lock.yaml
+skills-lock.json
+.cursor

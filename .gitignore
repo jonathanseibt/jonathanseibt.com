@@ -1,4 +1,22 @@
-# Don't forget: when making changes down here, sync them with the .eslintignore and .prettierignore files.
-.next
+.env
+.env.local
+.env.*.local
+
+# SECTION:8!c6A Don't forget to keep .prettierignore (SECTION:72&Qg) and packages/eslint-config/base.js (SECTION:&k9FB) in sync.
 node_modules
-tsconfig.tsbuildinfo
+.agents
+.turbo
+dist
+.next
+.expo
+.vercel
+*.log
+*.tsbuildinfo
+.DS_Store
+out
+build
+next-env.d.ts
+expo-env.d.ts
+uniwind-types.d.ts
+ios
+android

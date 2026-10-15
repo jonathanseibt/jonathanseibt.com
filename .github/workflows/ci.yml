@@ -1,0 +1,42 @@
+name: CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'main'
+    # SECTION:X6St^ Don't forget to keep .vercelignore (SECTION:P8#3d) in sync.
+    paths-ignore:
+      - '.cursor/**'
+      - '.agents/**'
+      - 'skills-lock.json'
+      - '.vscode/**'
+      - 'files'
+      - 'README.md'
+      - 'CURSOR.md'
+      - 'PROJECT.md'
+      - '.env.example'
+
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6 # https://github.com/actions/checkout
+
+      - uses: pnpm/action-setup@v6 # https://github.com/pnpm/action-setup
+
+      - uses: actions/setup-node@v6 # https://github.com/actions/setup-node
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+
+      - run: pnpm i --frozen-lockfile
+
+      - run: pnpm lint
+
+      - run: pnpm build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://jonathanseibt.com
+
+      - run: npx -y vercel@latest --prod --yes --token ${{ secrets.VERCEL_DEPLOY_TOKEN }}

@@ -1,11 +1,10 @@
-# Always in .vercelignore file.
-.github
-.npmrc
-tsconfig.tsbuildinfo
-
-# Don't forget: when making changes down here, sync them with the paths-ignore attribute in the workflow.yml file.
-.husky
-.vscode
+# SECTION:P8#3d Don't forget to keep .github/workflows/ci.yml (SECTION:X6St^) in sync.
+.cursor/**
+.agents/**
+skills-lock.json
+.vscode/**
 files
-LICENSE
 README.md
+CURSOR.md
+PROJECT.md
+.env.example
