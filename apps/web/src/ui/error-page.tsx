@@ -11,7 +11,7 @@ export function ErrorPage({ title = 'Internal error', description = '500' }: { t
             alt='Jonathan Seibt logo, in thin typography, black color, transparent background, all capital and well spaced, like a modern font face.'
             width={256}
             height={16}
-            quality={100}
+            unoptimized
             loading='eager'
             fetchPriority='high'
             className='text-transparent'
@@ -26,7 +26,7 @@ export function ErrorPage({ title = 'Internal error', description = '500' }: { t
             alt='Yellow hand emoji, in a 3D style, with two fingers up, like a cool greeting gesture.'
             width={64}
             height={64}
-            quality={100}
+            unoptimized
             loading='eager'
             fetchPriority='high'
             className='animation-wave text-transparent'
